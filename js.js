@@ -17,6 +17,15 @@ function cubeCalculation() {
   span[1].innerHTML = 4 * Math.pow(a, 2);
 }
 
+function geometricMean() {
+  var input = document.querySelectorAll(".third-task > input");
+  var span = document.querySelectorAll(".task3");
+  var a = +input[0].value;
+  var b = +input[1].value;
+  span[0].innerHTML = (a + b) / 2;
+  span[1].innerHTML = Math.sqrt(a * b);
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
