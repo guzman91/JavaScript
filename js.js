@@ -35,6 +35,13 @@ function abcMean() {
   span[1].innerHTML = Math.sqrt(a * b);
 }
 
+function heightFormula() {
+  var input = document.querySelector(".fifth-task > input");
+  var span = document.querySelector(".task5");
+  var h = +input.value;
+  span.innerHTML = Math.sqrt((2 * h) / 9.8075);
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
