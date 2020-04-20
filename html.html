@@ -21,12 +21,59 @@
         <div class="flex">
             <p>a * b = </p><span class="task1"></span>
         </div>
-        <div id="form">
-            <input id="a_value" type="number" name="" id="" placeholder="a">
-            <input type="number" name="" id="b_value" placeholder="b">
-            <input type="button" name="enter" value="Проверить" id="check" onClick="mainClick()" />
+        <input id="a_value" type="number" name="" id="" placeholder="a">
+        <input type="number" name="" id="b_value" placeholder="b">
+        <input type="button" name="enter" value="Submit" id="check" onClick="mainClick()" />
+    </div>
+    <hr>
+    <div class="second-task">
+        <p>3. Дана длина ребра куба a. Найти объем куба и площадь его боковой поверхности.</p>
+        <p>Объем куба равен s<sup>3</sup>, где s — длина одного (любого) ребра куба.</p>
+        <div class="flex">
+            <p>s<sup>3</sup> = </p><span class="task2"></span>
+        </div>
+        <p>Площадь боковой поверхности куба:</p>
+        <div class="flex">
+            <p> S = 4a<sup>2</sup> = </p><span class="task2"></span>
+        </div>
+        <input type="number" name="" id="" placeholder="a">
+        <input type="button" value="Submit" onclick="cubeCalculation()">
+    </div>
+    <hr>
+    <div class="third-task">
+        <p>4. Даны два действительных положительных числа a и b. Найти среднее арифметическое и среднее геометрическое
+            этих
+            чисел.</p>
+        <p>Cреднее арифметическое: </p>
+        <div class="flex eq">
+            <p>a<sub>ср.арифм</sub> = </p>
+            <table class="tfrac">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="dtop">a<sub><var>1</var></sub><em>+</em> a<sub><var>2</var></sub><em>+</em>
+                                …<em>+</em> a<sub>n</sub></div>
+                            <div class="dbot">n</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="flex">
+            <p>a<sub>ср.арифм</sub> = </p><span class="task3"></span>
+        </div>
+        <img src="pictures/geometric-mean.png" alt="geometric-mean">
+        <div class="flex">
+            <p>a<sub>ср.геом</sub> = </p><span class="task3"></span>
         </div>
     </div>
+
+
+
+
+
+
 </body>
 
 <script src="js.js"></script>

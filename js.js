@@ -1,5 +1,5 @@
 function mainClick() {
-  var input = document.querySelectorAll("#form > input");
+  var input = document.querySelectorAll("#first-task > input");
   var span = document.querySelectorAll(".task1");
 
   var a = +input[0].value;
@@ -9,6 +9,14 @@ function mainClick() {
   span[1].innerHTML = a - b;
   span[2].innerHTML = a * b;
 }
+
+function cubeCalculation() {
+  var a = document.querySelector(".second-task > input").value;
+  var span = document.querySelectorAll(".task2");
+  span[0].innerHTML = Math.pow(a, 3);
+  span[1].innerHTML = 4 * Math.pow(a, 2);
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
