@@ -1,17 +1,13 @@
 function mainClick() {
-  var inputA = document.querySelector("#a_value");
-  var inputB = document.querySelector("#b_value");
-  var spanPlus = document.querySelector("#id1");
-  var spanMinus = document.querySelector("#id2");
-  var spanMulty = document.querySelector("#id3");
+  var input = document.querySelectorAll("#form > input");
+  var span = document.querySelectorAll(".task1");
 
-  var a = +inputA.value;
-  var b = +inputB.value;
+  var a = +input[0].value;
+  var b = +input[1].value;
 
-  spanPlus.innerHTML = a + b;
-
-  console.log("a ", a);
-  console.log("b ", b);
+  span[0].innerHTML = a + b;
+  span[1].innerHTML = a - b;
+  span[2].innerHTML = a * b;
 }
 // var string = "Hello my dear friend";
 // var number = 28;
