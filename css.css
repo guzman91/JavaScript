@@ -63,3 +63,13 @@ span {
 img {
   width: 300px;
 }
+
+.abc > p:first-child {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: fit-content;
+}
+
+.abc > p:nth-child(2) {
+  margin-left: 5px;
+}

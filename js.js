@@ -26,6 +26,15 @@ function geometricMean() {
   span[1].innerHTML = Math.sqrt(a * b);
 }
 
+function abcMean() {
+  var input = document.querySelectorAll(".fourth-task > input");
+  var span = document.querySelectorAll(".task4");
+  var a = Math.abs(+input[0].value);
+  var b = Math.abs(+input[1].value);
+  span[0].innerHTML = (a + b) / 2;
+  span[1].innerHTML = Math.sqrt(a * b);
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
