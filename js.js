@@ -65,6 +65,20 @@ function triangleCalculations() {
   span[4].innerHTML = Math.sqrt(((p - a) * (p - b) * (p - c)) / p);
 }
 
+function distanceCalculations() {
+  var input = document.querySelectorAll(".coordinate-inputs > input");
+  var span = document.querySelector(".task8");
+  var x1 = +input[0].value;
+  var y1 = +input[1].value;
+  var x2 = +input[2].value;
+  var y2 = +input[3].value;
+  span.innerHTML = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  console.log("x1", x1);
+  console.log("x2", x2);
+  console.log("y1", y1);
+  console.log("y2", y2);
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;

@@ -75,3 +75,14 @@ img {
 .image {
   width: 150px;
 }
+
+.input-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.coordinate-inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px;
+}
