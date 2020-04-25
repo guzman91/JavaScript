@@ -49,6 +49,22 @@ function triangleArea() {
   span.innerHTML = (Math.sqrt(3) * Math.pow(a, 2)) / 4;
 }
 
+function triangleCalculations() {
+  var input = document.querySelectorAll(".seventh-task > input");
+  var span = document.querySelectorAll(".task7");
+  var a = Math.abs(+input[0].value);
+  var b = Math.abs(+input[1].value);
+  var c = Math.abs(+input[2].value);
+  var p = (a + b + c) / 2;
+  span[0].innerHTML = (2 * Math.sqrt(p * (p - a) * (p - b) * (p - c))) / a;
+  span[1].innerHTML =
+    Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2)) / 2;
+  span[2].innerHTML = Math.sqrt(a * b * (a + b + c) * (a + b - c)) / (a + b);
+  span[3].innerHTML =
+    (a * b * c) / (4 * Math.sqrt(p * (p - a) * (p - b) * (p - c)));
+  span[4].innerHTML = Math.sqrt(((p - a) * (p - b) * (p - c)) / p);
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
