@@ -79,6 +79,28 @@ function distanceCalculations() {
   console.log("y2", y2);
 }
 
+function maxMinCalculation() {
+  var input = document.querySelectorAll(".nineth-task > input");
+  var span = document.querySelector(".task9");
+  if (+input[0].value > +input[1].value) {
+    span.innerHTML =
+      "Max value - " +
+      +input[0].value +
+      "<br>" +
+      "Min value - " +
+      +input[1].value;
+  } else if (+input[0].value === +input[1].value) {
+    span.innerHTML = "x and y equal";
+  } else {
+    span.innerHTML =
+      "Max value - " +
+      +input[1].value +
+      "<br>" +
+      "Min value - " +
+      +input[0].value;
+  }
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
