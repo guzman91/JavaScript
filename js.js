@@ -162,6 +162,25 @@ function inequalityCheck() {
   }
 }
 
+function inequalityCheck2() {
+  var input = document.querySelectorAll(".thirteenth-task > input");
+  var span = document.querySelector(".task13");
+  span.innerHTML =
+    +input[0].value >= +input[1].value && +input[1].value >= +input[2].value
+      ? "a &ge; b &ge; c - true => a: " +
+        input[0].value * input[0].value +
+        "; b: " +
+        input[1].value * input[1].value +
+        "; c: " +
+        input[2].value * input[2].value
+      : "a &ge; b &ge; c - false => |a| :" +
+        Math.abs(input[0].value) +
+        "; |b|: " +
+        Math.abs(input[1].value) +
+        "; |c|: " +
+        Math.abs(input[2].value);
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
