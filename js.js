@@ -42,6 +42,13 @@ function heightFormula() {
   span.innerHTML = Math.sqrt((2 * h) / 9.8075);
 }
 
+function triangleArea() {
+  var input = document.querySelector(".sixth-task > input");
+  var span = document.querySelector(".task6");
+  var a = +input.value;
+  span.innerHTML = (Math.sqrt(3) * Math.pow(a, 2)) / 4;
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
