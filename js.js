@@ -80,7 +80,7 @@ function distanceCalculations() {
 }
 
 function maxMinCalculation() {
-  var input = document.querySelectorAll(".nineth-task > input");
+  var input = document.querySelectorAll(".ninth-task > input");
   var span = document.querySelector(".task9");
   if (+input[0].value > +input[1].value) {
     span.innerHTML =
@@ -99,6 +99,22 @@ function maxMinCalculation() {
       "Min value - " +
       +input[0].value;
   }
+}
+
+function maxMinCalc() {
+  var input = document.querySelectorAll(".array");
+  var span = document.querySelector(".task10");
+  console.log(input);
+  var values = [];
+  for (let index = 0; index < input.length; index++) {
+    values.push(input[index].value);
+  }
+  span.innerHTML =
+    "Max value - " +
+    Math.max.apply(null, values) +
+    "<br>" +
+    "Min value - " +
+    Math.min.apply(null, values);
 }
 
 // var string = "Hello my dear friend";
