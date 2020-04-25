@@ -152,6 +152,16 @@ function maxMin() {
     (Math.sqrt(min) + 1);
 }
 
+function inequalityCheck() {
+  var input = document.querySelectorAll(".twelfth-task > input");
+  var span = document.querySelector(".task12");
+  if (+input[0].value < +input[1].value && +input[1].value < +input[2].value) {
+    span.innerHTML = " true";
+  } else {
+    span.innerHTML = " false";
+  }
+}
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
