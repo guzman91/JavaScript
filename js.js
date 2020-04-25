@@ -104,7 +104,6 @@ function maxMinCalculation() {
 function maxMinCalc() {
   var input = document.querySelectorAll(".array");
   var span = document.querySelector(".task10");
-  console.log(input);
   var values = [];
   for (let index = 0; index < input.length; index++) {
     values.push(input[index].value);
@@ -115,6 +114,42 @@ function maxMinCalc() {
     "<br>" +
     "Min value - " +
     Math.min.apply(null, values);
+}
+
+function maxMin() {
+  var input = document.querySelectorAll(".eleventh-task > input");
+  var span = document.querySelectorAll(".task11");
+  if (
+    +input[0].value + +input[1].value + +input[2].value >
+    input[0].value * input[1].value * input[2].value
+  ) {
+    var max = +input[0].value + +input[1].value + +input[2].value;
+  } else {
+    var max = input[0].value * input[1].value * input[2].value;
+  }
+  span[0].innerHTML =
+    " = (" +
+    (+input[0].value + +input[1].value + +input[2].value) +
+    ", " +
+    input[0].value * input[1].value * input[2].value +
+    ") = " +
+    max;
+  // second part
+  if (
+    +input[0].value + +input[1].value + input[2].value / 2 <
+    input[0].value * input[1].value * input[2].value
+  ) {
+    var min = +input[0].value + +input[1].value + input[2].value / 2;
+  } else {
+    var min = input[0].value * input[1].value * input[2].value;
+  }
+  span[1].innerHTML =
+    " = (" +
+    (+input[0].value + +input[1].value + input[2].value / 2) +
+    ", " +
+    input[0].value * input[1].value * input[2].value +
+    ") = " +
+    (Math.sqrt(min) + 1);
 }
 
 // var string = "Hello my dear friend";
