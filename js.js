@@ -225,8 +225,30 @@ function task77() {
   }
   span[4].innerHTML = " = " + squareRoot;
   span[6].innerHTML = " = " + squareRoot3n;
+}
 
-  // Calculation of sixth task
+function task78() {
+  var input = document.querySelectorAll(".fifteenth-task > input");
+  var span = document.querySelectorAll(".task15");
+  var a = +input[0].value,
+    n = +input[1].value;
+  span[0].innerHTML = " = " + a ** n;
+  var rezultB = 1;
+  var rezultC = 1 / a;
+  var sumA = 1;
+  var rezultD = 1 / a;
+  var rezultE = 1;
+  for (let index = 1; index <= n; index++) {
+    sumA *= a + index;
+    rezultB *= a + (index - 1);
+    rezultC += 1 / (a * sumA);
+    rezultD += 1 / a ** Math.pow(2, index);
+    rezultE *= a - index;
+  }
+  span[1].innerHTML = " = " + rezultB;
+  span[2].innerHTML = " = " + rezultC;
+  span[3].innerHTML = " = " + rezultD;
+  span[4].innerHTML = " = " + a * rezultE;
 }
 
 // Calculation of third task
