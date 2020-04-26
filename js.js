@@ -251,6 +251,15 @@ function task78() {
   span[4].innerHTML = " = " + a * rezultE;
 }
 
+function task79() {
+  var span = document.querySelector(".task16");
+  var rezult = 1;
+  for (let index = 0.1; index <= 10; index += 0.1) {
+    rezult *= 1 + Math.sin(index);
+  }
+  span.innerHTML = " " + rezult;
+}
+
 // Calculation of third task
 
 // var string = "Hello my dear friend";
