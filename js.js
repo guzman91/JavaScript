@@ -216,7 +216,6 @@ function task77() {
   for (; i >= 1; i--) {
     squareRoot = Math.sqrt(2 + squareRoot);
     squareRoot3n = Math.sqrt(3 * (i - 1) + Math.sqrt(3 * i) + squareRoot3n);
-    console.log("squareRoot3n ", squareRoot3n);
   }
   span[4].innerHTML = " = " + squareRoot;
   span[6].innerHTML = " = " + squareRoot3n;
