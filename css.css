@@ -90,3 +90,16 @@ img {
 .margin {
   margin-bottom: 15px;
 }
+
+.fourteenth-task img {
+  height: 60px;
+}
+
+.fourteenth-task .flex {
+  margin: 0 0 20px 0;
+}
+
+.flex p {
+  margin: 0;
+  padding: 0;
+}

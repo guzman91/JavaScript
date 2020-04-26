@@ -181,6 +181,56 @@ function inequalityCheck2() {
         Math.abs(input[2].value);
 }
 
+function task77() {
+  var input = document.querySelector(".fourteenth-task > input");
+  var span = document.querySelectorAll(".task14");
+
+  // Calculation of first task
+  var n = +input.value;
+  span[0].innerHTML = " = " + Math.pow(2, n);
+
+  // Calculation of second,third, fourth tasks
+  var task2 = 1,
+    task3 = 1,
+    sumSin = 0,
+    sumCos = 0,
+    task4 = 0,
+    task6 = 1;
+  for (let index = 1; index <= n; index++) {
+    task2 *= index;
+    task3 *= 1 + 1 / index ** 2;
+    sumSin += Math.sin(index);
+    sumCos += Math.cos(index);
+    task4 += 1 / sumSin;
+    task6 *= sumCos / sumSin;
+  }
+  span[1].innerHTML = " = " + task2;
+  span[2].innerHTML = " = " + task3;
+  span[3].innerHTML = " = " + task4;
+  span[5].innerHTML = " = " + task6;
+
+  // Calculation of fifth task
+  let i = n;
+  var squareRoot = Math.sqrt(2);
+  if (i == 1) {
+    var squareRoot3n = Math.sqrt(3 * (i - 1) + Math.sqrt(3 * i));
+  } else {
+    var squareRoot3n = 0;
+  }
+  console.log("squareRoot3n ", squareRoot3n);
+  for (; i > 1; i--) {
+    squareRoot = Math.sqrt(2 + squareRoot);
+    squareRoot3n = Math.sqrt(3 * (i - 1) + Math.sqrt(3 * i) + squareRoot3n);
+    console.log("squareRoot цыкл ", squareRoot3n);
+  }
+  span[4].innerHTML = " = " + squareRoot;
+  span[6].innerHTML = " = " + squareRoot3n;
+
+  // Calculation of sixth task
+}
+
+// Calculation of third task
+
 // var string = "Hello my dear friend";
 // var number = 28;
 // var isTrue = true;
