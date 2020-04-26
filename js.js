@@ -204,9 +204,6 @@ function task77() {
     sumCos += Math.cos(index);
     task4 += 1 / sumSin;
     task6 *= sumCos / sumSin;
-    squareRoot3n = Math.sqrt(
-      3 * (index - 1) + Math.sqrt(3 * index) + squareRoot3n
-    );
   }
   span[1].innerHTML = " = " + task2;
   span[2].innerHTML = " = " + task3;
@@ -215,9 +212,11 @@ function task77() {
 
   // Calculation of fifth task
   let i = n;
-  var squareRoot = Math.sqrt(2);
-  for (; i > 1; i--) {
+  var squareRoot = 0;
+  for (; i >= 1; i--) {
     squareRoot = Math.sqrt(2 + squareRoot);
+    squareRoot3n = Math.sqrt(3 * (i - 1) + Math.sqrt(3 * i) + squareRoot3n);
+    console.log("squareRoot3n ", squareRoot3n);
   }
   span[4].innerHTML = " = " + squareRoot;
   span[6].innerHTML = " = " + squareRoot3n;
@@ -255,49 +254,3 @@ function task79() {
   }
   span.innerHTML = " " + rezult;
 }
-
-// Calculation of third task
-
-// var string = "Hello my dear friend";
-// var number = 28;
-// var isTrue = true;
-// var isNull = null;
-// var isUndefined = undefined;
-// var isObject = { a: 2 };
-
-// console.log(typeof isNull);
-
-// var int = 5;
-// console.log("5%2 = ", 5 % 2);
-// console.log(int);
-// console.log("5*=2 = ", (int *= 2));
-// int = 5;
-// console.log("5/=2 = ", (int /= 2));
-// int = 5;
-// console.log("5/=2 = ", ++int);
-// int = 5;
-// console.log("5/=2 = ", int--);
-// function myFunction() {
-//   var x = document.getElementById("form");
-// let i = 1;
-// let a = x.elements[0].value;
-// let b = x.elements[1].value;
-// console.log("a ", a);
-// console.log("b ", x);
-// document.getElementById("id1").innerHTML = x;
-// }
-
-// var btn = document.querySelector("#check");
-// console.log(btn);
-// var a = document.querySelector("#a_value");
-
-// function mainClick() {
-//   console.log("10");
-// }
-// btn.addEventListener("click", myFunk);
-
-// function myFunk() {
-//   var a = document.querySelector("#a_value");
-//   console.log(a);
-// }
-// btn.addEventListener("click", mainClick);
