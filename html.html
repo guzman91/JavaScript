@@ -21,7 +21,7 @@
         <div class="flex">
             <p class="eq"> a · b = </p><span class="task1 eq"></span>
         </div>
-        <input id="a_value" type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="number" name="" id="b_value" placeholder="b">
         <input type="button" name="enter" value="Submit" id="check" onClick="mainClick()" />
     </div>
@@ -36,7 +36,7 @@
         <div class="flex">
             <p> S = 4a<sup>2</sup> = </p><span class="task2"></span>
         </div>
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="button" value="Submit" onclick="cubeCalculation()">
     </div>
     <hr>
@@ -67,7 +67,7 @@
         <div class="flex">
             <p>a<sub>ср.геом</sub> = </p><span class="task3"></span>
         </div>
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="number" name="" id="" placeholder="b">
         <input type="button" value="Submit" onclick="geometricMean()">
     </div>
@@ -84,7 +84,7 @@
             <p>a<sub>ср.геом</sub></p>
             <p>=</p> <span class="task4"></span>
         </div>
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="number" name="" id="" placeholder="b">
         <input type="button" value="Submit" onclick="abcMean()">
     </div>
@@ -95,7 +95,7 @@
         <div class="flex">
             <p>t = </p> <span class="task5"></span>
         </div>
-        <input type="number" name="" id="" placeholder="h">
+        <input class="input" type="number" name="" id="" placeholder="h">
         <input type="button" value="Submit" onclick="heightFormula()">
     </div>
     <hr>
@@ -105,7 +105,7 @@
         <div class="flex">
             <p>S = </p> <span class="task6"></span>
         </div>
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="button" value="Submit" onclick="triangleArea()">
     </div>
     <hr>
@@ -137,7 +137,7 @@
             <p>r = </p> <span class="task7"></span>
         </div>
 
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="number" name="" id="" placeholder="b">
         <input type="number" name="" id="" placeholder="c">
         <input type="button" value="Submit" onclick="triangleCalculations()">
@@ -152,7 +152,7 @@
         <div class="flex">
             <p>d = </p> <span class="task8"></span>
         </div>
-        <div class="input-section">
+        <div class="input-section input">
             <div class="coordinate-inputs">
                 <input type="number" name="" id="" placeholder="x1">
                 <input type="number" name="" id="" placeholder="y1">
@@ -171,7 +171,7 @@
         <div class="flex">
             <span class="task9 margin"></span>
         </div>
-        <input type="number" name="" id="" placeholder="x">
+        <input class="input" type="number" name="" id="" placeholder="x">
         <input type="number" name="" id="" placeholder="y">
         <input type="button" value="Submit" onclick="maxMinCalculation()">
     </div>
@@ -184,7 +184,7 @@
         <div class="flex">
             <span class="task10 margin"></span>
         </div>
-        <input class="array" type="number" name="" id="" placeholder="x">
+        <input class="array input" type="number" name="" id="" placeholder="x">
         <input class="array" type="number" name="" id="" placeholder="y">
         <input class="array" type="number" name="" id="" placeholder="z">
         <input type="button" value="Submit" onclick="maxMinCalc()">
@@ -200,7 +200,7 @@
                 z/2, x • y • z) + 1</p><span class="task11"></span>
         </div>
 
-        <input type="number" name="" id="" placeholder="x">
+        <input class="input" type="number" name="" id="" placeholder="x">
         <input type="number" name="" id="" placeholder="y">
         <input type="number" name="" id="" placeholder="z">
         <input type="button" value="Submit" onclick="maxMin()">
@@ -211,7 +211,7 @@
         <div class="flex">
             <p>Result: </p><span class="task12"></span>
         </div>
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="number" name="" id="" placeholder="b">
         <input type="number" name="" id="" placeholder="c">
         <input type="button" value="Submit" onclick="inequalityCheck()">
@@ -226,11 +226,12 @@
         <div class="flex">
             <p>Result: </p><span class="task13"></span>
         </div>
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="number" name="" id="" placeholder="b">
         <input type="number" name="" id="" placeholder="c">
         <input type="button" value="Submit" onclick="inequalityCheck2()">
     </div>
+    <hr>
     <div class="fourteenth-task">
         <p>77. Дано натуральное число n. Вычислить:</p>
         <div class="flex">
@@ -240,21 +241,22 @@
             <p>б) n! </p><span class="task14"></span>
         </div>
         <div class="flex">
-            <p>в)</p><img src="pictures/formula-3.png" alt="formula-3"><span class="task14"></span>
+            <p>в)</p><img class="formula-img" src="pictures/formula-3.png" alt="formula-3"><span class="task14"></span>
         </div>
         <div class="flex">
-            <p>г)</p><img src="pictures/formula-4.png" alt="formula-4"><span class="task14"></span>
+            <p>г)</p><img class="formula-img" src="pictures/formula-4.png" alt="formula-4"><span class="task14"></span>
         </div>
         <div class="flex">
-            <p>д)</p><img src="pictures/formula-5.png" alt="formula-5"><span class="task14"></span>
+            <p>д)</p><img class="formula-image" src="pictures/formula-5.png" alt="formula-5"><span
+                class="task14"></span>
         </div>
         <div class="flex">
-            <p>е)</p><img src="pictures/formula-6.png" alt="formula-6"><span class="task14"></span>
+            <p>е)</p><img class="formula-img" src="pictures/formula-6.png" alt="formula-6"><span class="task14"></span>
         </div>
         <div class="flex">
-            <p>ж)</p><img src="pictures/formula-7.png" alt="formula-7"><span class="task14"></span>
+            <p>ж)</p><img class="formula-img" src="pictures/formula-7.png" alt="formula-7"><span class="task14"></span>
         </div>
-        <input type="number" name="" id="" placeholder="n">
+        <input class="input" type="number" name="" id="" placeholder="n">
         <input type="button" value="Submit" onclick="task77()">
     </div>
     <hr>
@@ -277,7 +279,7 @@
         <div class="flex">
             <p>д) a(a - n)(a - 2n)...(a - n<sup>2</sup>)</p><span class="task15"></span>
         </div>
-        <input type="number" name="" id="" placeholder="a">
+        <input class="input" type="number" name="" id="" placeholder="a">
         <input type="number" name="" id="" placeholder="n">
         <input type="button" value="Submit" onclick="task78()">
     </div>
@@ -289,7 +291,7 @@
         <div class="flex">
             <p>Rezult: </p><span class="task16"></span>
         </div>
-        <input type="button" value="Submit" onclick="task79()">
+        <input class="input" type="button" value="Submit" onclick="task79()">
     </div>
 
 
