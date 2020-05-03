@@ -1,3 +1,4 @@
+//task 1
 function mainClick() {
   var input = document.querySelectorAll("#first-task > input");
   var span = document.querySelectorAll(".task1");
@@ -10,6 +11,7 @@ function mainClick() {
   span[2].innerHTML = a * b;
 }
 
+//task 3
 function cubeCalculation() {
   var a = document.querySelector(".second-task > input").value;
   var span = document.querySelectorAll(".task2");
@@ -17,6 +19,7 @@ function cubeCalculation() {
   span[1].innerHTML = 4 * Math.pow(a, 2);
 }
 
+//task 4
 function geometricMean() {
   var input = document.querySelectorAll(".third-task > input");
   var span = document.querySelectorAll(".task3");
@@ -26,6 +29,7 @@ function geometricMean() {
   span[1].innerHTML = Math.sqrt(a * b);
 }
 
+//task 5
 function abcMean() {
   var input = document.querySelectorAll(".fourth-task > input");
   var span = document.querySelectorAll(".task4");
@@ -35,6 +39,7 @@ function abcMean() {
   span[1].innerHTML = Math.sqrt(a * b);
 }
 
+//task 10
 function heightFormula() {
   var input = document.querySelector(".fifth-task > input");
   var span = document.querySelector(".task5");
@@ -42,6 +47,7 @@ function heightFormula() {
   span.innerHTML = Math.sqrt((2 * h) / 9.8075);
 }
 
+//task 12
 function triangleArea() {
   var input = document.querySelector(".sixth-task > input");
   var span = document.querySelector(".task6");
@@ -49,6 +55,7 @@ function triangleArea() {
   span.innerHTML = (Math.sqrt(3) * Math.pow(a, 2)) / 4;
 }
 
+//task 23
 function triangleCalculations() {
   var input = document.querySelectorAll(".seventh-task > input");
   var span = document.querySelectorAll(".task7");
@@ -65,6 +72,7 @@ function triangleCalculations() {
   span[4].innerHTML = Math.sqrt(((p - a) * (p - b) * (p - c)) / p);
 }
 
+//task 24
 function distanceCalculations() {
   var input = document.querySelectorAll(".coordinate-inputs > input");
   var span = document.querySelector(".task8");
@@ -79,6 +87,7 @@ function distanceCalculations() {
   console.log("y2", y2);
 }
 
+//task 33
 function maxMinCalculation() {
   var input = document.querySelectorAll(".ninth-task > input");
   var span = document.querySelector(".task9");
@@ -101,6 +110,7 @@ function maxMinCalculation() {
   }
 }
 
+//task 34
 function maxMinCalc() {
   var input = document.querySelectorAll(".array");
   var span = document.querySelector(".task10");
@@ -116,6 +126,7 @@ function maxMinCalc() {
     Math.min.apply(null, values);
 }
 
+//task 35
 function maxMin() {
   var input = document.querySelectorAll(".eleventh-task > input");
   var span = document.querySelectorAll(".task11");
@@ -152,6 +163,7 @@ function maxMin() {
     (Math.sqrt(min) + 1);
 }
 
+//task 36
 function inequalityCheck() {
   var input = document.querySelectorAll(".twelfth-task > input");
   var span = document.querySelector(".task12");
@@ -162,6 +174,7 @@ function inequalityCheck() {
   }
 }
 
+//task 37
 function inequalityCheck2() {
   var input = document.querySelectorAll(".thirteenth-task > input");
   var span = document.querySelector(".task13");
@@ -181,6 +194,7 @@ function inequalityCheck2() {
         Math.abs(input[2].value);
 }
 
+//task 77
 function task77() {
   var input = document.querySelector(".fourteenth-task > input");
   var span = document.querySelectorAll(".task14");
@@ -221,6 +235,7 @@ function task77() {
   span[6].innerHTML = " = " + squareRoot3n;
 }
 
+//task 78
 function task78() {
   var input = document.querySelectorAll(".fifteenth-task > input");
   var span = document.querySelectorAll(".task15");
@@ -245,6 +260,7 @@ function task78() {
   span[4].innerHTML = " = " + a * rezultE;
 }
 
+//task 79
 function task79() {
   var span = document.querySelector(".task16");
   var rezult = 1;
@@ -252,4 +268,9 @@ function task79() {
     rezult *= 1 + Math.sin(index);
   }
   span.innerHTML = " " + rezult;
+}
+
+//
+function cislo() {
+  if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;
 }
