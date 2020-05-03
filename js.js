@@ -1,10 +1,10 @@
 //task 1
 function mainClick() {
-  var input = document.querySelectorAll("#first-task > input");
+  var input = document.querySelectorAll("#first-task  input");
   var span = document.querySelectorAll(".task1");
 
-  var a = +input[0].value;
-  var b = +input[1].value;
+  var a = +input[1].value;
+  var b = +input[2].value;
 
   span[0].innerHTML = a + b;
   span[1].innerHTML = a - b;
@@ -13,7 +13,7 @@ function mainClick() {
 
 //task 3
 function cubeCalculation() {
-  var a = document.querySelector(".second-task > input").value;
+  var a = document.querySelector(".cube-input").value;
   var span = document.querySelectorAll(".task2");
   span[0].innerHTML = Math.pow(a, 3);
   span[1].innerHTML = 4 * Math.pow(a, 2);
@@ -21,27 +21,27 @@ function cubeCalculation() {
 
 //task 4
 function geometricMean() {
-  var input = document.querySelectorAll(".third-task > input");
+  var input = document.querySelectorAll(".third-task  input");
   var span = document.querySelectorAll(".task3");
-  var a = +input[0].value;
-  var b = +input[1].value;
+  var a = +input[1].value;
+  var b = +input[2].value;
   span[0].innerHTML = (a + b) / 2;
   span[1].innerHTML = Math.sqrt(a * b);
 }
 
 //task 5
 function abcMean() {
-  var input = document.querySelectorAll(".fourth-task > input");
+  var input = document.querySelectorAll(".fourth-task  input");
   var span = document.querySelectorAll(".task4");
-  var a = Math.abs(+input[0].value);
-  var b = Math.abs(+input[1].value);
+  var a = Math.abs(+input[1].value);
+  var b = Math.abs(+input[2].value);
   span[0].innerHTML = (a + b) / 2;
   span[1].innerHTML = Math.sqrt(a * b);
 }
 
 //task 10
 function heightFormula() {
-  var input = document.querySelector(".fifth-task > input");
+  var input = document.querySelector(".height-input");
   var span = document.querySelector(".task5");
   var h = +input.value;
   span.innerHTML = Math.sqrt((2 * h) / 9.8075);
@@ -49,7 +49,7 @@ function heightFormula() {
 
 //task 12
 function triangleArea() {
-  var input = document.querySelector(".sixth-task > input");
+  var input = document.querySelector(".sixth-input");
   var span = document.querySelector(".task6");
   var a = +input.value;
   span.innerHTML = (Math.sqrt(3) * Math.pow(a, 2)) / 4;
@@ -57,11 +57,11 @@ function triangleArea() {
 
 //task 23
 function triangleCalculations() {
-  var input = document.querySelectorAll(".seventh-task > input");
+  var input = document.querySelectorAll(".seventh-task  input");
   var span = document.querySelectorAll(".task7");
-  var a = Math.abs(+input[0].value);
-  var b = Math.abs(+input[1].value);
-  var c = Math.abs(+input[2].value);
+  var a = Math.abs(+input[1].value);
+  var b = Math.abs(+input[2].value);
+  var c = Math.abs(+input[3].value);
   var p = (a + b + c) / 2;
   span[0].innerHTML = (2 * Math.sqrt(p * (p - a) * (p - b) * (p - c))) / a;
   span[1].innerHTML =
@@ -89,24 +89,24 @@ function distanceCalculations() {
 
 //task 33
 function maxMinCalculation() {
-  var input = document.querySelectorAll(".ninth-task > input");
+  var input = document.querySelectorAll(".ninth-task  input");
   var span = document.querySelector(".task9");
-  if (+input[0].value > +input[1].value) {
-    span.innerHTML =
-      "Max value - " +
-      +input[0].value +
-      "<br>" +
-      "Min value - " +
-      +input[1].value;
-  } else if (+input[0].value === +input[1].value) {
-    span.innerHTML = "x and y equal";
-  } else {
+  if (+input[1].value > +input[2].value) {
     span.innerHTML =
       "Max value - " +
       +input[1].value +
       "<br>" +
       "Min value - " +
-      +input[0].value;
+      +input[2].value;
+  } else if (+input[1].value === +input[2].value) {
+    span.innerHTML = "x and y equal";
+  } else {
+    span.innerHTML =
+      "Max value - " +
+      +input[2].value +
+      "<br>" +
+      "Min value - " +
+      +input[1].value;
   }
 }
 
@@ -128,46 +128,46 @@ function maxMinCalc() {
 
 //task 35
 function maxMin() {
-  var input = document.querySelectorAll(".eleventh-task > input");
+  var input = document.querySelectorAll(".eleventh-task  input");
   var span = document.querySelectorAll(".task11");
   if (
-    +input[0].value + +input[1].value + +input[2].value >
-    input[0].value * input[1].value * input[2].value
+    +input[1].value + +input[2].value + +input[3].value >
+    input[1].value * input[2].value * input[3].value
   ) {
-    var max = +input[0].value + +input[1].value + +input[2].value;
+    var max = +input[1].value + +input[2].value + +input[3].value;
   } else {
-    var max = input[0].value * input[1].value * input[2].value;
+    var max = input[1].value * input[2].value * input[3].value;
   }
   span[0].innerHTML =
     " = (" +
-    (+input[0].value + +input[1].value + +input[2].value) +
+    (+input[1].value + +input[2].value + +input[3].value) +
     ", " +
-    input[0].value * input[1].value * input[2].value +
+    input[1].value * input[2].value * input[3].value +
     ") = " +
     max;
   // second part
   if (
-    +input[0].value + +input[1].value + input[2].value / 2 <
-    input[0].value * input[1].value * input[2].value
+    +input[1].value + +input[2].value + input[3].value / 2 <
+    input[1].value * input[2].value * input[3].value
   ) {
-    var min = +input[0].value + +input[1].value + input[2].value / 2;
+    var min = +input[1].value + +input[2].value + input[3].value / 2;
   } else {
-    var min = input[0].value * input[1].value * input[2].value;
+    var min = input[1].value * input[2].value * input[3].value;
   }
   span[1].innerHTML =
     " = (" +
-    (+input[0].value + +input[1].value + input[2].value / 2) +
+    (+input[1].value + +input[2].value + input[3].value / 2) +
     ", " +
-    input[0].value * input[1].value * input[2].value +
+    input[1].value * input[2].value * input[3].value +
     ") = " +
     (Math.sqrt(min) + 1);
 }
 
 //task 36
 function inequalityCheck() {
-  var input = document.querySelectorAll(".twelfth-task > input");
+  var input = document.querySelectorAll(".twelfth-task  input");
   var span = document.querySelector(".task12");
-  if (+input[0].value < +input[1].value && +input[1].value < +input[2].value) {
+  if (+input[1].value < +input[2].value && +input[2].value < +input[3].value) {
     span.innerHTML = " true";
   } else {
     span.innerHTML = " false";
@@ -176,27 +176,27 @@ function inequalityCheck() {
 
 //task 37
 function inequalityCheck2() {
-  var input = document.querySelectorAll(".thirteenth-task > input");
+  var input = document.querySelectorAll(".thirteenth-task  input");
   var span = document.querySelector(".task13");
   span.innerHTML =
-    +input[0].value >= +input[1].value && +input[1].value >= +input[2].value
+    +input[1].value >= +input[2].value && +input[2].value >= +input[3].value
       ? "a &ge; b &ge; c - true => a: " +
-        input[0].value * input[0].value +
+        input[1].value * 2 +
         "; b: " +
-        input[1].value * input[1].value +
+        input[2].value * 2 +
         "; c: " +
-        input[2].value * input[2].value
+        input[3].value * 2
       : "a &ge; b &ge; c - false => |a| :" +
-        Math.abs(input[0].value) +
-        "; |b|: " +
         Math.abs(input[1].value) +
+        "; |b|: " +
+        Math.abs(input[2].value) +
         "; |c|: " +
-        Math.abs(input[2].value);
+        Math.abs(input[3].value);
 }
 
 //task 77
 function task77() {
-  var input = document.querySelector(".fourteenth-task > input");
+  var input = document.querySelector(".input-task77");
   var span = document.querySelectorAll(".task14");
 
   // Calculation of first task
@@ -237,10 +237,10 @@ function task77() {
 
 //task 78
 function task78() {
-  var input = document.querySelectorAll(".fifteenth-task > input");
+  var input = document.querySelectorAll(".fifteenth-task  input");
   var span = document.querySelectorAll(".task15");
-  var a = +input[0].value,
-    n = +input[1].value;
+  var a = +input[1].value,
+    n = +input[2].value;
   span[0].innerHTML = " = " + a ** n;
   var rezultB = 1;
   var rezultC = 1 / a;

@@ -9,299 +9,352 @@
 </head>
 
 <body>
-    <h1>JavaScript Practice</h1>
-    <div id="first-task">
-        <p>1. Даны два действительных числа a и b. Получить их сумму, разность и произведение.</p>
-        <div class="flex">
-            <p class="eq">a + b = </p><span class="task1 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">a - b = </p><span class="task1 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq"> a · b = </p><span class="task1 eq"></span>
-        </div>
-        <input class="input" type="number" name="" id="" placeholder="a">
-        <input type="number" name="" id="b_value" placeholder="b">
-        <input type="button" name="enter" value="Submit" id="check" onClick="mainClick()" />
-    </div>
-    <hr>
-    <div class="second-task">
-        <p>3. Дана длина ребра куба a. Найти объем куба и площадь его боковой поверхности.</p>
-        <p>Объем куба равен s<sup>3</sup>, где s — длина одного (любого) ребра куба.</p>
-        <div class="flex">
-            <p class="eq">s<sup>3</sup> = </p><span class="task2 eq"></span>
-        </div>
-        <p>Площадь боковой поверхности куба:</p>
-        <div class="flex">
-            <p class="eq"> S = 4a<sup>2</sup> = </p><span class="task2 eq"></span>
-        </div>
-        <input class="input" type="number" name="" id="" placeholder="a">
-        <input type="button" value="Submit" onclick="cubeCalculation()">
-    </div>
-    <hr>
-    <div class="third-task">
-        <p>4. Даны два действительных положительных числа a и b. Найти среднее арифметическое и среднее геометрическое
-            этих
-            чисел.</p>
-        <p>Cреднее арифметическое: </p>
-        <div class="flex eq">
-            <p class="eq">a<sub>ср.арифм</sub> = </p>
-            <table class="tfrac">
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="dtop">a<sub><var>1</var></sub><em>+</em> a<sub><var>2</var></sub><em>+</em>
-                                …<em>+</em> a<sub>n</sub></div>
-                            <div class="dbot">n</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <section class="ac-container">
 
+        <h1>JavaScript Practice</h1>
+        <div id="first-task">
+            <input id="ac-1" name="accordion-1" type="checkbox" checked />
+            <label for="ac-1">1. Даны два действительных числа a и b. Получить их сумму, разность и
+                произведение.</label>
+            <article>
+                <div class="flex">
+                    <p class="eq">a + b = </p><span class="task1 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">a - b = </p><span class="task1 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq"> a · b = </p><span class="task1 eq"></span>
+                </div>
+                <input class="input" type="number" name="" id="" placeholder="a">
+                <input type="number" name="" id="b_value" placeholder="b">
+                <input type="button" name="enter" value="Submit" id="check" onClick="mainClick()" />
+            </article>
         </div>
-        <div class="flex">
-            <p class="eq">a<sub>ср.арифм</sub> = </p><span class="task3 eq"></span>
+        <hr>
+        <div class="second-task">
+            <input id="ac-2" name="accordion-1" type="checkbox" />
+            <label for="ac-2">3. Дана длина ребра куба a. Найти объем куба и площадь его боковой поверхности.</label>
+            <article>
+                <p>Объем куба равен s<sup>3</sup>, где s — длина одного (любого) ребра куба.</p>
+                <div class="flex">
+                    <p class="eq">s<sup>3</sup> = </p><span class="task2 eq"></span>
+                </div>
+                <p>Площадь боковой поверхности куба:</p>
+                <div class="flex">
+                    <p class="eq"> S = 4a<sup>2</sup> = </p><span class="task2 eq"></span>
+                </div>
+                <input class="input cube-input" type="number" name="" id="" placeholder="a">
+                <input type="button" value="Submit" onclick="cubeCalculation()">
+            </article>
         </div>
-        <img src="pictures/geometric-mean.png" alt="geometric-mean">
-        <div class="flex">
-            <p class="eq">a<sub>ср.геом</sub> = </p><span class="task3 eq"></span>
+        <hr>
+        <div class="third-task">
+            <input id="ac-3" name="accordion-1" type="checkbox" />
+            <label for="ac-3">4. Даны два действительных положительных числа a и b. Найти среднее арифметическое и
+                среднее
+                геометрическое
+                этих
+                чисел.</label>
+            <article class="medium-article">
+                <p>Cреднее арифметическое: </p>
+                <div class="flex eq">
+                    <p class="eq">a<sub>ср.арифм</sub> = </p>
+                    <table class="tfrac">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="dtop">a<sub><var>1</var></sub><em>+</em>
+                                        a<sub><var>2</var></sub><em>+</em>
+                                        …<em>+</em> a<sub>n</sub></div>
+                                    <div class="dbot">n</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="flex">
+                    <p class="eq">a<sub>ср.арифм</sub> = </p><span class="task3 eq"></span>
+                </div>
+                <img src="pictures/geometric-mean.png" alt="geometric-mean">
+                <div class="flex">
+                    <p class="eq">a<sub>ср.геом</sub> = </p><span class="task3 eq"></span>
+                </div>
+                <input class="input" type="text" onKeyPress="cislo()" name="" id="" placeholder="a" maxlength="10">
+                <input type="text" name="" id="" onKeyPress="cislo()" placeholder="b" maxlength="10">
+                <input type="button" value="Submit" onclick="geometricMean()">
+            </article>
         </div>
-        <input class="input" type="text" onKeyPress="cislo()" name="" id="" placeholder="a" maxlength="10">
-        <input type="text" name="" id="" onKeyPress="cislo()" placeholder="b" maxlength="10">
-        <input type="button" value="Submit" onclick="geometricMean()">
-    </div>
-    <hr>
-    <div class="fourth-task">
-        <p>5. Даны два действительных числа. Найти среднее арифметическое кубов этих чисел и среднее геометрическое
-            модулей
-            этих чисел</p>
-        <div class="flex abc">
-            <p class="eq">a<sub>ср.арифм</sub></p>
-            <p class="eq"> = </p> <span class="task4 eq"></span>
+        <hr>
+        <div class="fourth-task">
+            <input id="ac-4" name="accordion-1" type="checkbox" />
+            <label for="ac-4">5. Даны два действительных числа. Найти среднее арифметическое кубов этих чисел и среднее
+                геометрическое
+                модулей
+                этих чисел</label>
+            <article>
+                <div class="flex abc">
+                    <p class="eq">a<sub>ср.арифм</sub></p>
+                    <p class="eq"> = </p> <span class="task4 eq"></span>
+                </div>
+                <div class="flex abc">
+                    <p class="eq">a<sub>ср.геом</sub></p>
+                    <p>=</p> <span class="task4 eq"></span>
+                </div>
+                <input class="input" type="text" onKeyPress="cislo()" name="" id="" placeholder="a" maxlength="10">
+                <input type="text" name="" id="" onKeyPress="cislo()" placeholder="b" maxlength="10">
+                <input type="button" value="Submit" onclick="abcMean()">
+            </article>
         </div>
-        <div class="flex abc">
-            <p class="eq">a<sub>ср.геом</sub></p>
-            <p>=</p> <span class="task4 eq"></span>
+        <hr>
+        <div class="fifth-task">
+            <input id="ac-5" name="accordion-1" type="checkbox" />
+            <label for="ac-5">10. Определить время падения камня на поверхность земли с высоты h.</label>
+            <article>
+                <img class="image" src="pictures/time-formula.png" alt="time-formula">
+                <div class="flex">
+                    <p class="eq">t = </p> <span class="task5 eq"></span>
+                </div>
+                <input class="input height-input" type="number" name="" id="" placeholder="h">
+                <input type="button" value="Submit" onclick="heightFormula()">
+            </article>
         </div>
-        <input class="input" type="text" onKeyPress="cislo()" name="" id="" placeholder="a" maxlength="10">
-        <input type="text" name="" id="" onKeyPress="cislo()" placeholder="b" maxlength="10">
-        <input type="button" value="Submit" onclick="abcMean()">
-    </div>
-    <hr>
-    <div class="fifth-task">
-        <p>10. Определить время падения камня на поверхность земли с высоты h.</p>
-        <img class="image" src="pictures/time-formula.png" alt="time-formula">
-        <div class="flex">
-            <p class="eq">t = </p> <span class="task5 eq"></span>
+        <hr>
+        <div class="sixth-task">
+            <input id="ac-6" name="accordion-1" type="checkbox" />
+            <label for="ac-6">12. Дана сторона равностороннего треугольника. Найти площадь этого треугольника.</label>
+            <article>
+                <img class="image" src="pictures/ravnost1.png" alt="area-of-a-triangle">
+                <div class="flex">
+                    <p class="eq">S = </p> <span class="task6 eq"></span>
+                </div>
+                <input class="input sixth-input" type="number" name="" id="" placeholder="a">
+                <input type="button" value="Submit" onclick="triangleArea()">
+            </article>
         </div>
-        <input class="input" type="number" name="" id="" placeholder="h">
-        <input type="button" value="Submit" onclick="heightFormula()">
-    </div>
-    <hr>
-    <div class="sixth-task">
-        <p>12. Дана сторона равностороннего треугольника. Найти площадь этого треугольника.</p>
-        <img class="image" src="pictures/ravnost1.png" alt="area-of-a-triangle">
-        <div class="flex">
-            <p class="eq">S = </p> <span class="task6 eq"></span>
+        <hr>
+        <div class="seventh-task">
+            <input id="ac-7" name="accordion-1" type="checkbox" />
+            <label for="ac-7">23. Треугольник задан длинами сторон. Найти:</label>
+            <article class="long-article">
+                <p> а) длины высот h<sub>a</sub>; <br> б) длины медиан
+                    m<sub>a</sub>;<br> в) длины
+                    биссектрис L;<br>
+                    г) радиусы вписанной r и описанной окружностей R.</p>
+                <img src="pictures/Triangle-height.png" alt="Triangle-height"> <br>
+                <img class="image" src="pictures/half-perimeter.png" alt="half-perimeter">
+                <div class="flex">
+                    <p class="eq">h<sub>a</sub> = </p> <span class="task7 eq"></span>
+                </div>
+                <img src="pictures/triangle-median.png" alt="triangle-median">
+                <div class="flex">
+                    <p class="eq">m<sub>a</sub> = </p> <span class="task7 eq"></span>
+                </div>
+                <img src="pictures/triangle-bisector.png" alt="triangle-bisector">
+                <div class="flex">
+                    <p class="eq">L = </p> <span class="task7 eq"></span>
+                </div>
+                <img src="pictures/radius-of-the-circumference-of-triangle.png"
+                    alt="radius-of-the-circumference-of-triangle">
+                <div class="flex">
+                    <p class="eq">R = </p> <span class="task7 eq"></span>
+                </div>
+                <img src="pictures/radius-of-the-inscribed-circle-of-the-triangle.png"
+                    alt="radius-of-the-inscribed-circle-of-the-triangle">
+                <div class="flex">
+                    <p class="eq">r = </p> <span class="task7 eq"></span>
+                </div>
+
+                <input class="input" type="number" name="" id="" placeholder="a">
+                <input type="number" name="" id="" placeholder="b">
+                <input type="number" name="" id="" placeholder="c">
+                <input type="button" value="Submit" onclick="triangleCalculations()">
+
+            </article>
         </div>
-        <input class="input" type="number" name="" id="" placeholder="a">
-        <input type="button" value="Submit" onclick="triangleArea()">
-    </div>
-    <hr>
-    <div class="seventh-task">
-        <p>23. Треугольник задан длинами сторон. Найти: <br> а) длины высот h<sub>a</sub>; <br> б) длины медиан
-            m<sub>a</sub>;<br> в) длины
-            биссектрис L;<br>
-            г) радиусы вписанной r и описанной окружностей R.</p>
-        <img src="pictures/Triangle-height.png" alt="Triangle-height"> <br>
-        <img class="image" src="pictures/half-perimeter.png" alt="half-perimeter">
-        <div class="flex">
-            <p class="eq">h<sub>a</sub> = </p> <span class="task7 eq"></span>
+        <hr>
+        <div class="eight-task">
+            <input id="ac-8" name="accordion-1" type="checkbox" />
+            <label for="ac-8">24. Вычислите расстояние между двумя точками с данными координатами: x<sub>1</sub>,
+                y<sub>1</sub> и
+                x<sub>2</sub>, y<sub>2</sub> </label>
+            <article>
+                <img src="pictures/distance-between-two-points.png" alt="distance-between-two-points">
+                <div class="flex">
+                    <p class="eq">d = </p> <span class="task8 eq"></span>
+                </div>
+                <div class="input-section input">
+                    <div class="coordinate-inputs">
+                        <input type="number" name="" id="" placeholder="x1">
+                        <input type="number" name="" id="" placeholder="y1">
+                    </div>
+                    <div class="coordinate-inputs">
+                        <input type="number" name="" id="" placeholder="x2">
+                        <input type="number" name="" id="" placeholder="y2">
+                    </div>
+                    <input type="button" value="Submit" onclick="distanceCalculations()">
+                </div>
+            </article>
         </div>
-        <img src="pictures/triangle-median.png" alt="triangle-median">
-        <div class="flex">
-            <p class="eq">m<sub>a</sub> = </p> <span class="task7 eq"></span>
-        </div>
-        <img src="pictures/triangle-bisector.png" alt="triangle-bisector">
-        <div class="flex">
-            <p class="eq">L = </p> <span class="task7 eq"></span>
-        </div>
-        <img src="pictures/radius-of-the-circumference-of-triangle.png" alt="radius-of-the-circumference-of-triangle">
-        <div class="flex">
-            <p class="eq">R = </p> <span class="task7 eq"></span>
-        </div>
-        <img src="pictures/radius-of-the-inscribed-circle-of-the-triangle.png"
-            alt="radius-of-the-inscribed-circle-of-the-triangle">
-        <div class="flex">
-            <p class="eq">r = </p> <span class="task7 eq"></span>
+        <hr>
+        <div class="ninth-task">
+            <input id="ac-9" name="accordion-1" type="checkbox" />
+            <label for="ac-9">33. Даны действительные числа x, y. Получить max(x,y), min(x,y)</label>
+            <article>
+                <div class="flex">
+                    <span class="task9 margin eq"></span>
+                </div>
+                <input class="input" type="number" name="" id="" placeholder="x">
+                <input type="number" name="" id="" placeholder="y">
+                <input type="button" value="Submit" onclick="maxMinCalculation()">
+            </article>
         </div>
 
-        <input class="input" type="number" name="" id="" placeholder="a">
-        <input type="number" name="" id="" placeholder="b">
-        <input type="number" name="" id="" placeholder="c">
-        <input type="button" value="Submit" onclick="triangleCalculations()">
+        <hr>
+        <div class="tenth-task">
+            <input id="ac-10" name="accordion-1" type="checkbox" />
+            <label for="ac-10">34. Даны действительные числа x, y, z. Получить max(x,y,z), min(x,y,z)</label>
+            <article>
+                <div class="flex">
+                    <span class="task10 margin eq"></span>
+                </div>
+                <input class="array input" type="number" name="" id="" placeholder="x">
+                <input class="array" type="number" name="" id="" placeholder="y">
+                <input class="array" type="number" name="" id="" placeholder="z">
+                <input type="button" value="Submit" onclick="maxMinCalc()">
+            </article>
+        </div>
+        <hr>
+        <div class="eleventh-task">
+            <input id="ac-11" name="accordion-1" type="checkbox" />
+            <label for="ac-11">35. Даны действительные числа x, y, z. Вычислить:</label>
+            <article>
+                <div class="flex">
+                    <p class="eq">а) max (x + y + z, x • y • z)</p><span class="task11 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">б) min<sup>2</sup>(x + y +
+                        z/2, x • y • z) + 1</p><span class="task11 eq"></span>
+                </div>
 
-
-    </div>
-    <hr>
-    <div class="eight-task">
-        <p>24. Вычислите расстояние между двумя точками с данными координатами: x<sub>1</sub>, y<sub>1</sub> и
-            x<sub>2</sub>, y<sub>2</sub> </p>
-        <img src="pictures/distance-between-two-points.png" alt="distance-between-two-points">
-        <div class="flex">
-            <p class="eq">d = </p> <span class="task8 eq"></span>
+                <input class="input" type="number" name="" id="" placeholder="x">
+                <input type="number" name="" id="" placeholder="y">
+                <input type="number" name="" id="" placeholder="z">
+                <input type="button" value="Submit" onclick="maxMin()">
+            </article>
         </div>
-        <div class="input-section input">
-            <div class="coordinate-inputs">
-                <input type="number" name="" id="" placeholder="x1">
-                <input type="number" name="" id="" placeholder="y1">
-            </div>
-            <div class="coordinate-inputs">
-                <input type="number" name="" id="" placeholder="x2">
-                <input type="number" name="" id="" placeholder="y2">
-            </div>
-            <input type="button" value="Submit" onclick="distanceCalculations()">
+        <hr>
+        <div class="twelfth-task">
+            <input id="ac-17" name="accordion-1" type="checkbox" />
+            <label for="ac-17">36. Даны действительные числа a, b, c. Проверить выполняются ли неравенства a &lt; b &lt;
+                c. </label>
+            <article>
+                <div class="flex">
+                    <p class="eq">Result: </p><span class="task12 eq"></span>
+                </div>
+                <input class="input" type="number" name="" id="" placeholder="a">
+                <input type="number" name="" id="" placeholder="b">
+                <input type="number" name="" id="" placeholder="c">
+                <input type="button" value="Submit" onclick="inequalityCheck()">
+            </article>
         </div>
-
-    </div>
-    <hr>
-    <div class="ninth-task">
-        <p>33. Даны действительные числа x, y. Получить max(x,y), min(x,y)</p>
-        <div class="flex">
-            <span class="task9 margin eq"></span>
+        <hr>
+        <div class="thirteenth-task">
+            <input id="ac-12" name="accordion-1" type="checkbox" />
+            <label for="ac-12">37. Даны действительные числа а, b, с. Удвоить эти числа, если a &ge; b &ge; c, и
+                заменить их
+                абсолютными
+                значениями, если
+                это не так.</label>
+            <article>
+                <div class="flex">
+                    <p class="eq">Result: </p><span class="task13 eq"></span>
+                </div>
+                <input class="input" type="number" name="" id="" placeholder="a">
+                <input type="number" name="" id="" placeholder="b">
+                <input type="number" name="" id="" placeholder="c">
+                <input type="button" value="Submit" onclick="inequalityCheck2()">
+            </article>
         </div>
-        <input class="input" type="number" name="" id="" placeholder="x">
-        <input type="number" name="" id="" placeholder="y">
-        <input type="button" value="Submit" onclick="maxMinCalculation()">
-    </div>
-
-    <hr>
-    <div class="tenth-task">
-        <p>
-            34. Даны действительные числа x, y, z. Получить max(x,y,z), min(x,y,z)
-        </p>
-        <div class="flex">
-            <span class="task10 margin eq"></span>
+        <hr>
+        <div class="fourteenth-task">
+            <input id="ac-13" name="accordion-1" type="checkbox" />
+            <label for="ac-13">77. Дано натуральное число n. Вычислить:</label>
+            <article class="mediumArticle">
+                <div class="flex">
+                    <p class="eq">a) 2<sup>n</sup> </p><span class="task14 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">б) n! </p><span class="task14 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">в)</p><img class="formula-img" src="pictures/formula-3.png" alt="formula-3"><span
+                        class="task14 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">г)</p><img class="formula-img" src="pictures/formula-4.png" alt="formula-4"><span
+                        class="task14 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">д)</p><img class="formula-image" src="pictures/formula-5.png" alt="formula-5"><span
+                        class="task14 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">е)</p><img class="formula-img" src="pictures/formula-6.png" alt="formula-6"><span
+                        class="task14 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">ж)</p><img class="formula-img" src="pictures/formula-7.png" alt="formula-7"><span
+                        class="task14 eq"></span>
+                </div>
+                <input class="input-task77" class="input" type="number" name="" id="" placeholder="n">
+                <input type="button" value="Submit" onclick="task77()">
+            </article>
         </div>
-        <input class="array input" type="number" name="" id="" placeholder="x">
-        <input class="array" type="number" name="" id="" placeholder="y">
-        <input class="array" type="number" name="" id="" placeholder="z">
-        <input type="button" value="Submit" onclick="maxMinCalc()">
-    </div>
-    <hr>
-    <div class="eleventh-task">
-        <p>35. Даны действительные числа x, y, z. Вычислить:</p>
-        <div class="flex">
-            <p class="eq">а) max (x + y + z, x • y • z)</p><span class="task11 eq"></span>
+        <hr>
+        <div class="fifteenth-task">
+            <input id="ac-14" name="accordion-1" type="checkbox" />
+            <label for="ac-14">78. Даны действительное число a и натуральное число n. Вычислить:</label>
+            <article class="medium-article">
+                <div class="flex">
+                    <p class="eq">а) a<sup>n</sup> </p><span class="task15 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">б) a(a + 1)...(a + n - 1) </p><span class="task15 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">в)</p><img src="pictures/formula-78-3.png" alt="formula-3"><span
+                        class="task15 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">г)</p><img src="pictures/formula-78-4.png" alt="formula-3"><span
+                        class="task15 eq"></span>
+                </div>
+                <div class="flex">
+                    <p class="eq">д) a(a - n)(a - 2n)...(a - n<sup>2</sup>)</p><span class="task15 eq"></span>
+                </div>
+                <input class="input" type="number" name="" id="" placeholder="a">
+                <input type="number" name="" id="" placeholder="n">
+                <input type="button" value="Submit" onclick="task78()">
+            </article>
         </div>
-        <div class="flex">
-            <p class="eq">б) min<sup>2</sup>(x + y +
-                z/2, x • y • z) + 1</p><span class="task11 eq"></span>
+        <hr>
+        <div class="sixteenth-task">
+            <input id="ac-15" name="accordion-1" type="checkbox" />
+            <label for="ac-15">79. Вычислить (1 + sin0.1)(1 + sin0.2)...(1 + sin10).</label>
+            <article>
+                <div class="flex">
+                    <p class="eq">Rezult: </p><span class="task16 eq"></span>
+                </div>
+                <input class="input" type="button" value="Submit" onclick="task79()">
+            </article>
         </div>
-
-        <input class="input" type="number" name="" id="" placeholder="x">
-        <input type="number" name="" id="" placeholder="y">
-        <input type="number" name="" id="" placeholder="z">
-        <input type="button" value="Submit" onclick="maxMin()">
-    </div>
-    <hr>
-    <div class="twelfth-task">
-        <p>36. Даны действительные числа a, b, c. Проверить выполняются ли неравенства a &lt; b &lt; c. </p>
-        <div class="flex">
-            <p class="eq">Result: </p><span class="task12 eq"></span>
-        </div>
-        <input class="input" type="number" name="" id="" placeholder="a">
-        <input type="number" name="" id="" placeholder="b">
-        <input type="number" name="" id="" placeholder="c">
-        <input type="button" value="Submit" onclick="inequalityCheck()">
-    </div>
-    <hr>
-    <div class="thirteenth-task">
-        <p>
-            37. Даны действительные числа а, b, с. Удвоить эти числа, если a &ge; b &ge; c, и заменить их абсолютными
-            значениями, если
-            это не так.
-        </p>
-        <div class="flex">
-            <p class="eq">Result: </p><span class="task13 eq"></span>
-        </div>
-        <input class="input" type="number" name="" id="" placeholder="a">
-        <input type="number" name="" id="" placeholder="b">
-        <input type="number" name="" id="" placeholder="c">
-        <input type="button" value="Submit" onclick="inequalityCheck2()">
-    </div>
-    <hr>
-    <div class="fourteenth-task">
-        <p>77. Дано натуральное число n. Вычислить:</p>
-        <div class="flex">
-            <p class="eq">a) 2<sup>n</sup> </p><span class="task14 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">б) n! </p><span class="task14 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">в)</p><img class="formula-img" src="pictures/formula-3.png" alt="formula-3"><span
-                class="task14 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">г)</p><img class="formula-img" src="pictures/formula-4.png" alt="formula-4"><span
-                class="task14 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">д)</p><img class="formula-image" src="pictures/formula-5.png" alt="formula-5"><span
-                class="task14 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">е)</p><img class="formula-img" src="pictures/formula-6.png" alt="formula-6"><span
-                class="task14 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">ж)</p><img class="formula-img" src="pictures/formula-7.png" alt="formula-7"><span
-                class="task14 eq"></span>
-        </div>
-        <input class="input" type="number" name="" id="" placeholder="n">
-        <input type="button" value="Submit" onclick="task77()">
-    </div>
-    <hr>
-    <div class="fifteenth-task">
-        <p>
-            78. Даны действительное число a и натуральное число n. Вычислить:
-        </p>
-        <div class="flex">
-            <p class="eq">а) a<sup>n</sup> </p><span class="task15 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">б) a(a + 1)...(a + n - 1) </p><span class="task15 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">в)</p><img src="pictures/formula-78-3.png" alt="formula-3"><span class="task15 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">г)</p><img src="pictures/formula-78-4.png" alt="formula-3"><span class="task15 eq"></span>
-        </div>
-        <div class="flex">
-            <p class="eq">д) a(a - n)(a - 2n)...(a - n<sup>2</sup>)</p><span class="task15 eq"></span>
-        </div>
-        <input class="input" type="number" name="" id="" placeholder="a">
-        <input type="number" name="" id="" placeholder="n">
-        <input type="button" value="Submit" onclick="task78()">
-    </div>
-    <hr>
-    <div class="sixteenth-task">
-        <p>
-            79. Вычислить (1 + sin0.1)(1 + sin0.2)...(1 + sin10).
-        </p>
-        <div class="flex">
-            <p class="eq">Rezult: </p><span class="task16 eq"></span>
-        </div>
-        <input class="input" type="button" value="Submit" onclick="task79()">
-    </div>
 
 
 
 
-
+    </section>
 </body>
 
 <script src="js.js"></script>
