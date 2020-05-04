@@ -270,25 +270,41 @@ function task79() {
   span.innerHTML = " " + rezult;
 }
 
-//
-
-function inputOnlyNum(input, event) {
-  var e = event;
-  var value = input.value;
-  if ((event.keyCode > 48 && event.keyCode < 57) || event.keyCode == 45) {
-    var all = value + e.key;
-    if (all.lastIndexOf("-") == 0 || all.lastIndexOf("-") == -1) {
-      return;
+//Inputs Validations
+//Only Integers
+document
+  .getElementById("wrapper")
+  .addEventListener("keypress", function (event) {
+    if (event.target.classList.contains("paste-validate")) {
+      var e = event;
+      var value = event.target.value;
+      if ((event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode == 45) {
+        var all = value + e.key;
+        if (
+          (all.lastIndexOf("-") == 0 && all.lastIndexOf("0") == 1) ||
+          all.lastIndexOf("0") == 0
+        ) {
+          event.returnValue = false;
+        } else if (all.lastIndexOf("-") == 0 || all.lastIndexOf("-") == -1) {
+          return;
+        } else {
+          event.returnValue = false;
+        }
+      } else {
+        event.returnValue = false;
+      }
     } else {
-      return false;
+      return;
     }
-  } else {
-    return false;
-  }
-}
+  });
 
+//Insertion Prevention
 document.getElementById("wrapper").addEventListener("paste", function (event) {
+  console.log(event);
+
   if (event.target.classList.contains("paste-validate")) {
     event.returnValue = false;
   }
 });
+
+//
