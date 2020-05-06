@@ -26,8 +26,8 @@
                 <div class="flex">
                     <p class="eq"> a · b = </p><span class="task1 eq"></span>
                 </div>
-                <input class="input paste-validate" type="text" placeholder="a" maxlength="10">
-                <input class="paste-validate" type="text" maxlength="10" placeholder="b">
+                <input class="input any-number" type="text" placeholder="a" maxlength="10">
+                <input class="any-number" type="text" maxlength="10" placeholder="b">
                 <input type="button" name="enter" value="Submit" id="check" onClick="mainClick()" />
             </article>
         </div>
@@ -44,7 +44,7 @@
                 <div class="flex">
                     <p class="eq"> S = 4a<sup>2</sup> = </p><span class="task2 eq"></span>
                 </div>
-                <input class="input cube-input" type="text" maxlength="10" placeholder="a">
+                <input class="input cube-input positive-with-digit" type="text" maxlength="10" placeholder="a">
                 <input type="button" value="Submit" onclick="cubeCalculation()">
             </article>
         </div>
@@ -80,8 +80,8 @@
                 <div class="flex">
                     <p class="eq">a<sub>ср.геом</sub> = </p><span class="task3 eq"></span>
                 </div>
-                <input class="input" type="text" onKeyPress="cislo()" name="" id="" placeholder="a" maxlength="10">
-                <input type="text" name="" id="" onKeyPress="cislo()" placeholder="b" maxlength="10">
+                <input class="input positive-with-digit" type="text" maxlength="10">
+                <input class="positive-with-digit" type="text" placeholder="b" maxlength="10">
                 <input type="button" value="Submit" onclick="geometricMean()">
             </article>
         </div>
@@ -101,8 +101,8 @@
                     <p class="eq">a<sub>ср.геом</sub></p>
                     <p>=</p> <span class="task4 eq"></span>
                 </div>
-                <input class="input" type="text" onKeyPress="cislo()" name="" id="" placeholder="a" maxlength="10">
-                <input type="text" name="" id="" onKeyPress="cislo()" placeholder="b" maxlength="10">
+                <input class="input any-number" type="text" placeholder="a" maxlength="10">
+                <input class="any-number" type="text" placeholder="b" maxlength="10">
                 <input type="button" value="Submit" onclick="abcMean()">
             </article>
         </div>
@@ -115,7 +115,7 @@
                 <div class="flex">
                     <p class="eq">t = </p> <span class="task5 eq"></span>
                 </div>
-                <input class="input height-input" type="number" name="" id="" placeholder="h">
+                <input class="input height-input positive-with-digit" type="text" placeholder="h" maxlength="10">
                 <input type="button" value="Submit" onclick="heightFormula()">
             </article>
         </div>
@@ -128,7 +128,7 @@
                 <div class="flex">
                     <p class="eq">S = </p> <span class="task6 eq"></span>
                 </div>
-                <input class="input sixth-input" type="number" name="" id="" placeholder="a">
+                <input class="input sixth-input positive-with-digit" type="text" maxlength="10" placeholder="a">
                 <input type="button" value="Submit" onclick="triangleArea()">
             </article>
         </div>
@@ -165,9 +165,9 @@
                     <p class="eq">r = </p> <span class="task7 eq"></span>
                 </div>
 
-                <input class="input" type="number" name="" id="" placeholder="a">
-                <input type="number" name="" id="" placeholder="b">
-                <input type="number" name="" id="" placeholder="c">
+                <input class="input positive-with-digit" type="text" maxlength="10" placeholder="a">
+                <input class="positive-with-digit" type="text" maxlength="10" placeholder="b">
+                <input class="positive-with-digit" type="text" maxlength="10" placeholder="c">
                 <input type="button" value="Submit" onclick="triangleCalculations()">
 
             </article>
@@ -185,12 +185,12 @@
                 </div>
                 <div class="input-section input">
                     <div class="coordinate-inputs">
-                        <input type="number" name="" id="" placeholder="x1">
-                        <input type="number" name="" id="" placeholder="y1">
+                        <input class="any-number" type="text" maxlength="10" placeholder="x1">
+                        <input class="any-number" type="text" maxlength="10" placeholder="y1">
                     </div>
                     <div class="coordinate-inputs">
-                        <input type="number" name="" id="" placeholder="x2">
-                        <input type="number" name="" id="" placeholder="y2">
+                        <input class="any-number" type="text" maxlength="10" placeholder="x2">
+                        <input class="any-number" type="text" maxlength="10" placeholder="y2">
                     </div>
                     <input type="button" value="Submit" onclick="distanceCalculations()">
                 </div>
@@ -204,8 +204,8 @@
                 <div class="flex">
                     <span class="task9 margin eq"></span>
                 </div>
-                <input class="input" type="number" name="" id="" placeholder="x">
-                <input type="number" name="" id="" placeholder="y">
+                <input class="input any-number" type="text" maxlength="10" placeholder="x">
+                <input class="any-number" type="text" maxlength="10" placeholder="y">
                 <input type="button" value="Submit" onclick="maxMinCalculation()">
             </article>
         </div>
@@ -218,9 +218,9 @@
                 <div class="flex">
                     <span class="task10 margin eq"></span>
                 </div>
-                <input class="array input" type="number" name="" id="" placeholder="x">
-                <input class="array" type="number" name="" id="" placeholder="y">
-                <input class="array" type="number" name="" id="" placeholder="z">
+                <input class="array input any-number" type="text" maxlength="10" placeholder="x">
+                <input class="array any-number" type="text" maxlength="10" placeholder="y">
+                <input class="array any-number" type="text" maxlength="10" placeholder="z">
                 <input type="button" value="Submit" onclick="maxMinCalc()">
             </article>
         </div>
@@ -237,9 +237,9 @@
                         z/2, x • y • z) + 1</p><span class="task11 eq"></span>
                 </div>
 
-                <input class="input" type="number" name="" id="" placeholder="x">
-                <input type="number" name="" id="" placeholder="y">
-                <input type="number" name="" id="" placeholder="z">
+                <input class="input any-number" type="text" maxlength="10" placeholder="x">
+                <input class="any-number" type="text" maxlength="10" placeholder="y">
+                <input class="any-number" type="text" maxlength="10" placeholder="z">
                 <input type="button" value="Submit" onclick="maxMin()">
             </article>
         </div>
@@ -252,9 +252,9 @@
                 <div class="flex">
                     <p class="eq">Result: </p><span class="task12 eq"></span>
                 </div>
-                <input class="input" type="number" name="" id="" placeholder="a">
-                <input type="number" name="" id="" placeholder="b">
-                <input type="number" name="" id="" placeholder="c">
+                <input class="input any-number" type="text" maxlength="10" placeholder="a">
+                <input class="any-number" type="text" maxlength="10" placeholder="b">
+                <input class="any-number" type="text" maxlength="10" placeholder="c">
                 <input type="button" value="Submit" onclick="inequalityCheck()">
             </article>
         </div>
@@ -270,9 +270,9 @@
                 <div class="flex">
                     <p class="eq">Result: </p><span class="task13 eq"></span>
                 </div>
-                <input class="input" type="number" name="" id="" placeholder="a">
-                <input type="number" name="" id="" placeholder="b">
-                <input type="number" name="" id="" placeholder="c">
+                <input class="input any-number" type="text" maxlength="10" placeholder="a">
+                <input class="any-number" type="text" maxlength="10" placeholder="b">
+                <input class="any-number" type="text" maxlength="10" placeholder="c">
                 <input type="button" value="Submit" onclick="inequalityCheck2()">
             </article>
         </div>
@@ -307,7 +307,7 @@
                     <p class="eq">ж)</p><img class="formula-img" src="pictures/formula-7.png" alt="formula-7"><span
                         class="task14 eq"></span>
                 </div>
-                <input class="input-task77" class="input" type="number" name="" id="" placeholder="n">
+                <input class="input-task77 input real-positive-number" type="text" maxlength="10" placeholder="n">
                 <input type="button" value="Submit" onclick="task77()">
             </article>
         </div>
@@ -333,8 +333,8 @@
                 <div class="flex">
                     <p class="eq">д) a(a - n)(a - 2n)...(a - n<sup>2</sup>)</p><span class="task15 eq"></span>
                 </div>
-                <input class="input" type="number" name="" id="" placeholder="a">
-                <input type="number" name="" id="" placeholder="n">
+                <input class="input any-number" type="text" maxlength="10" placeholder="a">
+                <input class="real-positive-number" type="text" maxlength="10" placeholder="n">
                 <input type="button" value="Submit" onclick="task78()">
             </article>
         </div>

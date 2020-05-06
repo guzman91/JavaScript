@@ -276,6 +276,7 @@ document
   .getElementById("wrapper")
   .addEventListener("keypress", function (event) {
     if (event.target.classList.contains("paste-validate")) {
+      //remove 'paste-validate' check not use in HTML
       // First Task Validation
       var e = event;
       var value = event.target.value;
@@ -294,12 +295,12 @@ document
       } else {
         event.returnValue = false;
       }
-    } else if (event.target.classList.contains("cube-input")) {
+    } else if (event.target.classList.contains("any-number")) {
       //Second Task Validation
       var e = event;
       var value = event.target.value;
       var reg = /^(-?\d?)$/m;
-      var reg1 = /^(-?(0\.)|(-?[1-9]+\.?))(\d*)$/m;
+      var reg1 = /^(-?(0\.)|(-?[1-9]+\d*\.?))(\d*)$/m;
       if (
         (event.keyCode >= 48 && event.keyCode <= 57) ||
         (event.keyCode > 44 && event.keyCode < 47)
@@ -313,16 +314,35 @@ document
       } else {
         event.returnValue = false;
       }
+    } else if (event.target.classList.contains("real-positive-number")) {
+      var e = event;
+      var value = event.target.value;
+      var all = value + e.key;
+      var reg2 = /^[1-9]\d*$/m;
+      if (reg2.test(all)) {
+        return;
+      } else {
+        event.returnValue = false;
+      }
+    } else if (event.target.classList.contains("positive-with-digit")) {
+      var e = event;
+      var value = event.target.value;
+      var all = value + e.key;
+      var reg3 = /^((0\.)|([1-9]+\d*\.?))(\d*)$/m;
+      var reg4 = /^\d$/m;
+      if (reg3.test(all) || reg4.test(all)) {
+        return;
+      } else {
+        event.returnValue = false;
+      }
     } else {
-      event.returnValue = false;
+      return;
     }
   });
 
 //Insertion Prevention
 document.getElementById("wrapper").addEventListener("paste", function (event) {
-  console.log(event);
-
-  if (event.target.classList.contains("paste-validate")) {
+  if (event.target.classList.contains("any-number")) {
     event.returnValue = false;
   }
 });
