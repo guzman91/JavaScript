@@ -276,6 +276,7 @@ document
   .getElementById("wrapper")
   .addEventListener("keypress", function (event) {
     if (event.target.classList.contains("paste-validate")) {
+      // First Task Validation
       var e = event;
       var value = event.target.value;
       if ((event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode == 45) {
@@ -293,8 +294,27 @@ document
       } else {
         event.returnValue = false;
       }
+    } else if (event.target.classList.contains("cube-input")) {
+      //Second Task Validation
+      var e = event;
+      var value = event.target.value;
+      var reg = /^(-?\d?)$/m;
+      var reg1 = /^(-?(0\.)|(-?[1-9]+\.?))(\d*)$/m;
+      if (
+        (event.keyCode >= 48 && event.keyCode <= 57) ||
+        (event.keyCode > 44 && event.keyCode < 47)
+      ) {
+        var all = value + e.key;
+        if (reg.test(all) || reg1.test(all)) {
+          return;
+        } else {
+          event.returnValue = false;
+        }
+      } else {
+        event.returnValue = false;
+      }
     } else {
-      return;
+      event.returnValue = false;
     }
   });
 
@@ -307,4 +327,4 @@ document.getElementById("wrapper").addEventListener("paste", function (event) {
   }
 });
 
-//
+//All digts except -
