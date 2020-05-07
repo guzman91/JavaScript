@@ -20,9 +20,40 @@ function mainClick() {
   ) {
     console.log("Incorect value in inputs for first task");
   } else {
-    span[0].innerHTML = a + b;
-    span[1].innerHTML = a - b;
-    span[2].innerHTML = a * b;
+    //new check start
+    var i = a.toString().includes(".")
+      ? a.toString().split(".").pop().length
+      : 0;
+
+    var i1 = b.toString().includes(".")
+      ? b.toString().split(".").pop().length
+      : 0;
+    var leng = i >= i1 ? i : i1;
+
+    //cycle x10
+    for (let index = 0; index < leng; index++) {
+      a *= 10;
+      b *= 10;
+    }
+
+    var sum, dif, mult;
+    sum = a + b;
+    dif = a - b;
+    mult = a * b;
+
+    //cycle /10
+    for (let index = 0; index < leng; index++) {
+      sum /= 10;
+      dif /= 10;
+      mult /= 100;
+    }
+
+    span[0].innerHTML = sum;
+    span[1].innerHTML = dif;
+    span[2].innerHTML = mult;
+    // span[0].innerHTML = a + b;
+    // span[1].innerHTML = a - b;
+    // span[2].innerHTML = a * b;
   }
 }
 
@@ -82,7 +113,7 @@ function abcMean() {
   ) {
     console.log("Incorect value in inputs for fourth task");
   } else {
-    span[0].innerHTML = (a + b) / 2;
+    span[0].innerHTML = (Math.pow(a, 3) + Math.pow(b, 3)) / 2;
     span[1].innerHTML = Math.sqrt(a * b);
   }
 }
@@ -191,22 +222,37 @@ function distanceCalculations() {
 function maxMinCalculation() {
   var input = document.querySelectorAll(".ninth-task  input");
   var span = document.querySelector(".task9");
-  if (+input[1].value > +input[2].value) {
-    span.innerHTML =
-      "Max value - " +
-      +input[1].value +
-      "<br>" +
-      "Min value - " +
-      +input[2].value;
-  } else if (+input[1].value === +input[2].value) {
-    span.innerHTML = "x and y equal";
+  var x = +input[1].value;
+  var y = +input[2].value;
+  input[1].style.outlineWidth =
+    isNaN(x) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(y) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(x) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(y) ||
+    input[2].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
   } else {
-    span.innerHTML =
-      "Max value - " +
-      +input[2].value +
-      "<br>" +
-      "Min value - " +
-      +input[1].value;
+    if (+input[1].value > +input[2].value) {
+      span.innerHTML =
+        "Max value - " +
+        +input[1].value +
+        "<br>" +
+        "Min value - " +
+        +input[2].value;
+    } else if (+input[1].value === +input[2].value) {
+      span.innerHTML = "x and y equal";
+    } else {
+      span.innerHTML =
+        "Max value - " +
+        +input[2].value +
+        "<br>" +
+        "Min value - " +
+        +input[1].value;
+    }
   }
 }
 
@@ -214,63 +260,126 @@ function maxMinCalculation() {
 function maxMinCalc() {
   var input = document.querySelectorAll(".array");
   var span = document.querySelector(".task10");
-  var values = [];
-  for (let index = 0; index < input.length; index++) {
-    values.push(input[index].value);
+  var x = +input[0].value;
+  var y = +input[1].value;
+  var z = +input[2].value;
+  input[0].style.outlineWidth =
+    isNaN(x) || input[0].value.toString().length == 0 ? "1px" : "0px";
+  input[1].style.outlineWidth =
+    isNaN(y) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(z) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(x) ||
+    input[0].value.toString().length == 0 ||
+    isNaN(y) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(z) ||
+    input[2].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
+  } else {
+    var values = [];
+    for (let index = 0; index < input.length; index++) {
+      values.push(input[index].value);
+    }
+    span.innerHTML =
+      "Max value - " +
+      Math.max.apply(null, values) +
+      "<br>" +
+      "Min value - " +
+      Math.min.apply(null, values);
   }
-  span.innerHTML =
-    "Max value - " +
-    Math.max.apply(null, values) +
-    "<br>" +
-    "Min value - " +
-    Math.min.apply(null, values);
 }
 
 //task 35
 function maxMin() {
   var input = document.querySelectorAll(".eleventh-task  input");
   var span = document.querySelectorAll(".task11");
+  var x = +input[1].value;
+  var y = +input[2].value;
+  var z = +input[3].value;
+  input[1].style.outlineWidth =
+    isNaN(x) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(y) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  input[3].style.outlineWidth =
+    isNaN(z) || input[3].value.toString().length == 0 ? "1px" : "0px";
   if (
-    +input[1].value + +input[2].value + +input[3].value >
-    input[1].value * input[2].value * input[3].value
+    isNaN(x) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(y) ||
+    input[2].value.toString().length == 0 ||
+    isNaN(z) ||
+    input[3].value.toString().length == 0
   ) {
-    var max = +input[1].value + +input[2].value + +input[3].value;
+    console.log("Incorect value in inputs for fourth task");
   } else {
-    var max = input[1].value * input[2].value * input[3].value;
+    if (
+      +input[1].value + +input[2].value + +input[3].value >
+      input[1].value * input[2].value * input[3].value
+    ) {
+      var max = +input[1].value + +input[2].value + +input[3].value;
+    } else {
+      var max = input[1].value * input[2].value * input[3].value;
+    }
+    span[0].innerHTML =
+      " = (" +
+      (+input[1].value + +input[2].value + +input[3].value) +
+      ", " +
+      input[1].value * input[2].value * input[3].value +
+      ") = " +
+      max;
+    // second part
+    if (
+      +input[1].value + +input[2].value + input[3].value / 2 <
+      input[1].value * input[2].value * input[3].value
+    ) {
+      var min = +input[1].value + +input[2].value + input[3].value / 2;
+    } else {
+      var min = input[1].value * input[2].value * input[3].value;
+    }
+    span[1].innerHTML =
+      " = (" +
+      (+input[1].value + +input[2].value + input[3].value / 2) +
+      ", " +
+      input[1].value * input[2].value * input[3].value +
+      ") = " +
+      (Math.sqrt(min) + 1);
   }
-  span[0].innerHTML =
-    " = (" +
-    (+input[1].value + +input[2].value + +input[3].value) +
-    ", " +
-    input[1].value * input[2].value * input[3].value +
-    ") = " +
-    max;
-  // second part
-  if (
-    +input[1].value + +input[2].value + input[3].value / 2 <
-    input[1].value * input[2].value * input[3].value
-  ) {
-    var min = +input[1].value + +input[2].value + input[3].value / 2;
-  } else {
-    var min = input[1].value * input[2].value * input[3].value;
-  }
-  span[1].innerHTML =
-    " = (" +
-    (+input[1].value + +input[2].value + input[3].value / 2) +
-    ", " +
-    input[1].value * input[2].value * input[3].value +
-    ") = " +
-    (Math.sqrt(min) + 1);
 }
 
 //task 36
 function inequalityCheck() {
   var input = document.querySelectorAll(".twelfth-task  input");
   var span = document.querySelector(".task12");
-  if (+input[1].value < +input[2].value && +input[2].value < +input[3].value) {
-    span.innerHTML = " true";
+  var a = +input[1].value;
+  var b = +input[2].value;
+  var c = +input[3].value;
+  input[1].style.outlineWidth =
+    isNaN(a) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(b) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  input[3].style.outlineWidth =
+    isNaN(c) || input[3].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(a) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(b) ||
+    input[2].value.toString().length == 0 ||
+    isNaN(c) ||
+    input[3].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
   } else {
-    span.innerHTML = " false";
+    if (
+      +input[1].value < +input[2].value &&
+      +input[2].value < +input[3].value
+    ) {
+      span.innerHTML = " true";
+    } else {
+      span.innerHTML = " false";
+    }
   }
 }
 
@@ -278,61 +387,86 @@ function inequalityCheck() {
 function inequalityCheck2() {
   var input = document.querySelectorAll(".thirteenth-task  input");
   var span = document.querySelector(".task13");
-  span.innerHTML =
-    +input[1].value >= +input[2].value && +input[2].value >= +input[3].value
-      ? "a &ge; b &ge; c - true => a: " +
-        input[1].value * 2 +
-        "; b: " +
-        input[2].value * 2 +
-        "; c: " +
-        input[3].value * 2
-      : "a &ge; b &ge; c - false => |a| :" +
-        Math.abs(input[1].value) +
-        "; |b|: " +
-        Math.abs(input[2].value) +
-        "; |c|: " +
-        Math.abs(input[3].value);
+  var a = +input[1].value;
+  var b = +input[2].value;
+  var c = +input[3].value;
+  input[1].style.outlineWidth =
+    isNaN(a) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(b) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  input[3].style.outlineWidth =
+    isNaN(c) || input[3].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(a) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(b) ||
+    input[2].value.toString().length == 0 ||
+    isNaN(c) ||
+    input[3].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
+  } else {
+    span.innerHTML =
+      +input[1].value >= +input[2].value && +input[2].value >= +input[3].value
+        ? "a &ge; b &ge; c - true => a: " +
+          input[1].value * 2 +
+          "; b: " +
+          input[2].value * 2 +
+          "; c: " +
+          input[3].value * 2
+        : "a &ge; b &ge; c - false => |a| :" +
+          Math.abs(input[1].value) +
+          "; |b|: " +
+          Math.abs(input[2].value) +
+          "; |c|: " +
+          Math.abs(input[3].value);
+  }
 }
 
 //task 77
 function task77() {
   var input = document.querySelector(".input-task77");
   var span = document.querySelectorAll(".task14");
-
   // Calculation of first task
   var n = +input.value;
-  span[0].innerHTML = " = " + Math.pow(2, n);
+  input.style.outlineWidth =
+    isNaN(n) || input.value.toString().length == 0 ? "1px" : "0px";
+  if (isNaN(n) || input.value.toString().length == 0) {
+    console.log("Incorect value in inputs for fourth task");
+  } else {
+    span[0].innerHTML = " = " + Math.pow(2, n);
 
-  // Calculation of second,third, fourth tasks
-  var task2 = 1,
-    task3 = 1,
-    sumSin = 0,
-    sumCos = 0,
-    task4 = 0,
-    task6 = 1,
-    squareRoot3n = 0;
-  for (let index = 1; index <= n; index++) {
-    task2 *= index;
-    task3 *= 1 + 1 / index ** 2;
-    sumSin += Math.sin(index);
-    sumCos += Math.cos(index);
-    task4 += 1 / sumSin;
-    task6 *= sumCos / sumSin;
-  }
-  span[1].innerHTML = " = " + task2;
-  span[2].innerHTML = " = " + task3;
-  span[3].innerHTML = " = " + task4;
-  span[5].innerHTML = " = " + task6;
+    // Calculation of second,third, fourth tasks
+    var task2 = 1,
+      task3 = 1,
+      sumSin = 0,
+      sumCos = 0,
+      task4 = 0,
+      task6 = 1,
+      squareRoot3n = 0;
+    for (let index = 1; index <= n; index++) {
+      task2 *= index;
+      task3 *= 1 + 1 / index ** 2;
+      sumSin += Math.sin(index);
+      sumCos += Math.cos(index);
+      task4 += 1 / sumSin;
+      task6 *= sumCos / sumSin;
+    }
+    span[1].innerHTML = " = " + task2;
+    span[2].innerHTML = " = " + task3;
+    span[3].innerHTML = " = " + task4;
+    span[5].innerHTML = " = " + task6;
 
-  // Calculation of fifth task
-  let i = n;
-  var squareRoot = 0;
-  for (; i >= 1; i--) {
-    squareRoot = Math.sqrt(2 + squareRoot);
-    squareRoot3n = Math.sqrt(3 * (i - 1) + Math.sqrt(3 * i) + squareRoot3n);
+    // Calculation of fifth task
+    let i = n;
+    var squareRoot = 0;
+    for (; i >= 1; i--) {
+      squareRoot = Math.sqrt(2 + squareRoot);
+      squareRoot3n = Math.sqrt(3 * (i - 1) + Math.sqrt(3 * i) + squareRoot3n);
+    }
+    span[4].innerHTML = " = " + squareRoot;
+    span[6].innerHTML = " = " + squareRoot3n;
   }
-  span[4].innerHTML = " = " + squareRoot;
-  span[6].innerHTML = " = " + squareRoot3n;
 }
 
 //task 78
@@ -341,23 +475,36 @@ function task78() {
   var span = document.querySelectorAll(".task15");
   var a = +input[1].value,
     n = +input[2].value;
-  span[0].innerHTML = " = " + a ** n;
-  var rezultB = 1;
-  var rezultC = 1 / a;
-  var sumA = 1;
-  var rezultD = 1 / a;
-  var rezultE = 1;
-  for (let index = 1; index <= n; index++) {
-    sumA *= a + index;
-    rezultB *= a + (index - 1);
-    rezultC += 1 / (a * sumA);
-    rezultD += 1 / a ** Math.pow(2, index);
-    rezultE *= a - index;
+  input[1].style.outlineWidth =
+    isNaN(a) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(n) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(a) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(n) ||
+    input[2].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
+  } else {
+    span[0].innerHTML = " = " + a ** n;
+    var rezultB = 1;
+    var rezultC = 1 / a;
+    var sumA = 1;
+    var rezultD = 1 / a;
+    var rezultE = 1;
+    for (let index = 1; index <= n; index++) {
+      sumA *= a + index;
+      rezultB *= a + (index - 1);
+      rezultC += 1 / (a * sumA);
+      rezultD += 1 / a ** Math.pow(2, index);
+      rezultE *= a - index;
+    }
+    span[1].innerHTML = " = " + rezultB;
+    span[2].innerHTML = " = " + rezultC;
+    span[3].innerHTML = " = " + rezultD;
+    span[4].innerHTML = " = " + a * rezultE;
   }
-  span[1].innerHTML = " = " + rezultB;
-  span[2].innerHTML = " = " + rezultC;
-  span[3].innerHTML = " = " + rezultD;
-  span[4].innerHTML = " = " + a * rezultE;
 }
 
 //task 79
