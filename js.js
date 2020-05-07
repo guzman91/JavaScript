@@ -47,8 +47,21 @@ function geometricMean() {
   var span = document.querySelectorAll(".task3");
   var a = +input[1].value;
   var b = +input[2].value;
-  span[0].innerHTML = (a + b) / 2;
-  span[1].innerHTML = Math.sqrt(a * b);
+  input[1].style.outlineWidth =
+    isNaN(a) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(b) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(a) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(b) ||
+    input[2].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
+  } else {
+    span[0].innerHTML = (a + b) / 2;
+    span[1].innerHTML = Math.sqrt(a * b);
+  }
 }
 
 //task 5
@@ -57,8 +70,21 @@ function abcMean() {
   var span = document.querySelectorAll(".task4");
   var a = Math.abs(+input[1].value);
   var b = Math.abs(+input[2].value);
-  span[0].innerHTML = (a + b) / 2;
-  span[1].innerHTML = Math.sqrt(a * b);
+  input[1].style.outlineWidth =
+    isNaN(a) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(b) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(a) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(b) ||
+    input[2].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
+  } else {
+    span[0].innerHTML = (a + b) / 2;
+    span[1].innerHTML = Math.sqrt(a * b);
+  }
 }
 
 //task 10
@@ -66,7 +92,13 @@ function heightFormula() {
   var input = document.querySelector(".height-input");
   var span = document.querySelector(".task5");
   var h = +input.value;
-  span.innerHTML = Math.sqrt((2 * h) / 9.8075);
+  input.style.outlineWidth =
+    isNaN(h) || input.value.toString().length == 0 ? "1px" : "0px";
+  if (isNaN(h) || input.value.toString().length == 0) {
+    console.log("Incorect value in inputs for third task");
+  } else {
+    span.innerHTML = Math.sqrt((2 * h) / 9.8075);
+  }
 }
 
 //task 12
@@ -74,7 +106,13 @@ function triangleArea() {
   var input = document.querySelector(".sixth-input");
   var span = document.querySelector(".task6");
   var a = +input.value;
-  span.innerHTML = (Math.sqrt(3) * Math.pow(a, 2)) / 4;
+  input.style.outlineWidth =
+    isNaN(a) || input.value.toString().length == 0 ? "1px" : "0px";
+  if (isNaN(a) || input.value.toString().length == 0) {
+    console.log("Incorect value in inputs for third task");
+  } else {
+    span.innerHTML = (Math.sqrt(3) * Math.pow(a, 2)) / 4;
+  }
 }
 
 //task 23
@@ -84,14 +122,32 @@ function triangleCalculations() {
   var a = Math.abs(+input[1].value);
   var b = Math.abs(+input[2].value);
   var c = Math.abs(+input[3].value);
-  var p = (a + b + c) / 2;
-  span[0].innerHTML = (2 * Math.sqrt(p * (p - a) * (p - b) * (p - c))) / a;
-  span[1].innerHTML =
-    Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2)) / 2;
-  span[2].innerHTML = Math.sqrt(a * b * (a + b + c) * (a + b - c)) / (a + b);
-  span[3].innerHTML =
-    (a * b * c) / (4 * Math.sqrt(p * (p - a) * (p - b) * (p - c)));
-  span[4].innerHTML = Math.sqrt(((p - a) * (p - b) * (p - c)) / p);
+
+  input[1].style.outlineWidth =
+    isNaN(a) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(b) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  input[3].style.outlineWidth =
+    isNaN(c) || input[3].value.toString().length == 0 ? "1px" : "0px";
+  if (
+    isNaN(a) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(b) ||
+    input[2].value.toString().length == 0 ||
+    isNaN(c) ||
+    input[3].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs");
+  } else {
+    var p = (a + b + c) / 2;
+    span[0].innerHTML = (2 * Math.sqrt(p * (p - a) * (p - b) * (p - c))) / a;
+    span[1].innerHTML =
+      Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2)) / 2;
+    span[2].innerHTML = Math.sqrt(a * b * (a + b + c) * (a + b - c)) / (a + b);
+    span[3].innerHTML =
+      (a * b * c) / (4 * Math.sqrt(p * (p - a) * (p - b) * (p - c)));
+    span[4].innerHTML = Math.sqrt(((p - a) * (p - b) * (p - c)) / p);
+  }
 }
 
 //task 24
@@ -102,11 +158,33 @@ function distanceCalculations() {
   var y1 = +input[1].value;
   var x2 = +input[2].value;
   var y2 = +input[3].value;
-  span.innerHTML = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-  console.log("x1", x1);
-  console.log("x2", x2);
-  console.log("y1", y1);
-  console.log("y2", y2);
+  input[0].style.outlineWidth =
+    isNaN(x1) || input[0].value.toString().length == 0 ? "1px" : "0px";
+  input[1].style.outlineWidth =
+    isNaN(y1) || input[1].value.toString().length == 0 ? "1px" : "0px";
+  input[2].style.outlineWidth =
+    isNaN(x2) || input[2].value.toString().length == 0 ? "1px" : "0px";
+  input[3].style.outlineWidth =
+    isNaN(y2) || input[3].value.toString().length == 0 ? "1px" : "0px";
+
+  if (
+    isNaN(x1) ||
+    input[0].value.toString().length == 0 ||
+    isNaN(y1) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(x2) ||
+    input[2].value.toString().length == 0 ||
+    isNaN(y2) ||
+    input[3].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for fourth task");
+  } else {
+    span.innerHTML = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    console.log("x1", x1);
+    console.log("x2", x2);
+    console.log("y1", y1);
+    console.log("y2", y2);
+  }
 }
 
 //task 33
