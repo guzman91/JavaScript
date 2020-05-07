@@ -209,3 +209,7 @@ body {
 .ac-container input:checked ~ .mediumArticle {
   height: 600px !important;
 }
+
+input {
+  outline: 0px solid red;
+}

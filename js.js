@@ -6,17 +6,39 @@ function mainClick() {
   var a = +input[1].value;
   var b = +input[2].value;
 
-  span[0].innerHTML = a + b;
-  span[1].innerHTML = a - b;
-  span[2].innerHTML = a * b;
+  input[1].style.outlineWidth =
+    isNaN(a) || input[1].value.toString().length == 0 ? "1px" : "0px";
+
+  input[2].style.outlineWidth =
+    isNaN(b) || input[2].value.toString().length == 0 ? "1px" : "0px";
+
+  if (
+    isNaN(a) ||
+    input[1].value.toString().length == 0 ||
+    isNaN(b) ||
+    input[2].value.toString().length == 0
+  ) {
+    console.log("Incorect value in inputs for first task");
+  } else {
+    span[0].innerHTML = a + b;
+    span[1].innerHTML = a - b;
+    span[2].innerHTML = a * b;
+  }
 }
 
 //task 3
 function cubeCalculation() {
-  var a = document.querySelector(".cube-input").value;
+  var input = document.querySelector(".cube-input");
   var span = document.querySelectorAll(".task2");
-  span[0].innerHTML = Math.pow(a, 3);
-  span[1].innerHTML = 4 * Math.pow(a, 2);
+  var a = +input.value;
+  input.style.outlineWidth =
+    isNaN(a) || input.value.toString().length == 0 ? "1px" : "0px";
+  if (isNaN(a) || input.value.toString().length == 0) {
+    console.log("Incorect value in inputs for third task");
+  } else {
+    span[0].innerHTML = Math.pow(a, 3);
+    span[1].innerHTML = 4 * Math.pow(a, 2);
+  }
 }
 
 //task 4
