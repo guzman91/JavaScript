@@ -547,7 +547,7 @@ document
       var e = event;
       var value = event.target.value;
       var reg = /^(-?\d?)$/m;
-      var reg1 = /^(-?(0\.)|(-?[1-9]+\d*\.?))(\d*)$/m;
+      var reg1 = /^(-?(0\.)|(-?[1-9]+\d*\.?))(\d?\d?\d?)$/m;
       if (
         (event.keyCode >= 48 && event.keyCode <= 57) ||
         (event.keyCode > 44 && event.keyCode < 47)
