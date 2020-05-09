@@ -589,7 +589,8 @@ document
 
 //Insertion Prevention
 document.getElementById("wrapper").addEventListener("paste", function (event) {
-  if (event.target.classList.contains("any-number")) {
+  var tagName = event.target.tagName.toLowerCase();
+  if (tagName === "input") {
     event.returnValue = false;
   }
 });
