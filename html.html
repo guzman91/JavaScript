@@ -18,17 +18,18 @@
                 произведение.</label>
             <article>
                 <div class="flex">
-                    <p class="eq">a + b = </p><span class="task1 eq"></span>
+                    <p class="eq">a + b = </p><span id="result_1_1" class="task1 eq"></span>
                 </div>
                 <div class="flex">
-                    <p class="eq">a - b = </p><span class="task1 eq"></span>
+                    <p class="eq">a - b = </p><span id="result_1_2" class="task1 eq"></span>
                 </div>
                 <div class="flex">
-                    <p class="eq"> a · b = </p><span class="task1 eq"></span>
+                    <p class="eq"> a · b = </p><span id="result_1_3" class="task1 eq"></span>
                 </div>
-                <input class="input any-number" type="text" placeholder="a" maxlength="10">
-                <input class="any-number" type="text" maxlength="10" placeholder="b">
-                <input type="button" name="enter" value="Submit" id="check" onClick="mainClick()" />
+                <input id="input_1_1" class="input any-number" type="text" placeholder="a" maxlength="10">
+                <input id="input_1_2" class="any-number" type="text" maxlength="10" placeholder="b">
+                <input type="button" name="enter" value="Submit" id="check"
+                    onClick="objectName.firstTaskSubmitClick(document.querySelector('#input_1_1').value, document.querySelector('#input_1_2').value, undefined, undefined, document.querySelector('#input_1_1'), document.querySelector('#input_1_2'), undefined, undefined, document.querySelector('#result_1_1'), document.querySelector('#result_1_2'), document.querySelector('#result_1_3'))" />
             </article>
         </div>
         <hr>
@@ -38,14 +39,15 @@
             <article>
                 <p>Объем куба равен s<sup>3</sup>, где s — длина одного (любого) ребра куба.</p>
                 <div class="flex">
-                    <p class="eq">s<sup>3</sup> = </p><span class="task2 eq"></span>
+                    <p class="eq">s<sup>3</sup> = </p><span id="result_2_1" class="task2 eq"></span>
                 </div>
                 <p>Площадь боковой поверхности куба:</p>
                 <div class="flex">
-                    <p class="eq"> S = 4a<sup>2</sup> = </p><span class="task2 eq"></span>
+                    <p class="eq"> S = 4a<sup>2</sup> = </p><span id="result_2_2" class="task2 eq"></span>
                 </div>
                 <input class="input cube-input positive-with-digit" type="text" maxlength="10" placeholder="a">
-                <input type="button" value="Submit" onclick="cubeCalculation()">
+                <input type="button" value="Submit"
+                    onclick="objectName.secondTaskSubmitClick(document.querySelector('.cube-input').value, document.querySelector('.cube-input'), document.querySelector('#result_2_1'), document.querySelector('#result_2_2'))">
             </article>
         </div>
         <hr>
@@ -74,15 +76,16 @@
                     </table>
                 </div>
                 <div class="flex">
-                    <p class="eq">a<sub>ср.арифм</sub> = </p><span class="task3 eq"></span>
+                    <p class="eq">a<sub>ср.арифм</sub> = </p><span id="result_4_1" class="task3 eq"></span>
                 </div>
                 <img src="pictures/geometric-mean.png" alt="geometric-mean">
                 <div class="flex">
-                    <p class="eq">a<sub>ср.геом</sub> = </p><span class="task3 eq"></span>
+                    <p class="eq">a<sub>ср.геом</sub> = </p><span id="result_4_2" class="task3 eq"></span>
                 </div>
-                <input class="input positive-with-digit" type="text" maxlength="10" placeholder="a">
-                <input class="positive-with-digit" type="text" placeholder="b" maxlength="10">
-                <input type="button" value="Submit" onclick="geometricMean()">
+                <input id="input_4_1" class="input positive-with-digit" type="text" maxlength="10" placeholder="a">
+                <input id="input_4_2" class="positive-with-digit" type="text" placeholder="b" maxlength="10">
+                <input type="button" value="Submit"
+                    onclick="objectName.fourthTaskSubmitClick(document.querySelector('#input_4_1').value, document.querySelector('#input_4_2').value, document.querySelector('#input_4_1'), document.querySelector('#input_4_2'), document.querySelector('#result_4_1'), document.querySelector('#result_4_2'))">
             </article>
         </div>
         <hr>
@@ -95,15 +98,16 @@
             <article>
                 <div class="flex ">
                     <p class="eq">a<sub>ср.арифм</sub></p>
-                    <p class="eq"> = </p> <span class="task4 eq"></span>
+                    <p class="eq"> = </p> <span id="result_5_1" class="task4 eq"></span>
                 </div>
                 <div class="flex abc">
                     <p class="eq">a<sub>ср.геом</sub></p>
-                    <p>=</p> <span class="task4 eq"></span>
+                    <p>=</p> <span id="result_5_2" class="task4 eq"></span>
                 </div>
-                <input class="input any-number" type="text" placeholder="a" maxlength="10">
-                <input class="any-number" type="text" placeholder="b" maxlength="10">
-                <input type="button" value="Submit" onclick="abcMean()">
+                <input id="input_5_1" class="input any-number" type="text" placeholder="a" maxlength="10">
+                <input id="input_5_2" class="any-number" type="text" placeholder="b" maxlength="10">
+                <input type="button" value="Submit"
+                    onclick="objectName.fifthTaskSubmitClick(document.querySelector('#input_5_1').value, document.querySelector('#input_5_2').value,document.querySelector('#input_5_1'), document.querySelector('#input_5_2'), document.querySelector('#result_5_1'), document.querySelector('#result_5_2'))">
             </article>
         </div>
         <hr>
@@ -113,10 +117,12 @@
             <article>
                 <img class="image" src="pictures/time-formula.png" alt="time-formula">
                 <div class="flex">
-                    <p class="eq">t = </p> <span class="task5 eq"></span>
+                    <p class="eq">t = </p> <span id="result_10_1" class="task5 eq"></span>
                 </div>
-                <input class="input height-input positive-with-digit" type="text" placeholder="h" maxlength="10">
-                <input type="button" value="Submit" onclick="heightFormula()">
+                <input id="input_10_1" class="input height-input positive-with-digit" type="text" placeholder="h"
+                    maxlength="10">
+                <input type="button" value="Submit"
+                    onclick="objectName.tenthTaskSubmitClick(document.querySelector('#input_10_1').value,document.querySelector('#input_10_1'),document.querySelector('#result_10_1'))">
             </article>
         </div>
         <hr>
@@ -126,10 +132,12 @@
             <article>
                 <img class="image" src="pictures/ravnost1.png" alt="area-of-a-triangle">
                 <div class="flex">
-                    <p class="eq">S = </p> <span class="task6 eq"></span>
+                    <p class="eq">S = </p> <span id="result_12_1" class="task6 eq"></span>
                 </div>
-                <input class="input sixth-input positive-with-digit" type="text" maxlength="10" placeholder="a">
-                <input type="button" value="Submit" onclick="triangleArea()">
+                <input id="input_12_1" class="input sixth-input positive-with-digit" type="text" maxlength="10"
+                    placeholder="a">
+                <input type="button" value="Submit"
+                    onclick="objectName.twelfthTaskSubmitClick(document.querySelector('#input_12_1').value,document.querySelector('#input_12_1'),document.querySelector('#result_12_1'))">
             </article>
         </div>
         <hr>
@@ -144,31 +152,32 @@
                 <img src="pictures/Triangle-height.png" alt="Triangle-height"> <br>
                 <img class="image" src="pictures/half-perimeter.png" alt="half-perimeter">
                 <div class="flex">
-                    <p class="eq">h<sub>a</sub> = </p> <span class="task7 eq"></span>
+                    <p class="eq">h<sub>a</sub> = </p> <span id="result_23_1" class="task7 eq"></span>
                 </div>
                 <img src="pictures/triangle-median.png" alt="triangle-median">
                 <div class="flex">
-                    <p class="eq">m<sub>a</sub> = </p> <span class="task7 eq"></span>
+                    <p class="eq">m<sub>a</sub> = </p> <span id="result_23_2" class="task7 eq"></span>
                 </div>
                 <img src="pictures/triangle-bisector.png" alt="triangle-bisector">
                 <div class="flex">
-                    <p class="eq">L = </p> <span class="task7 eq"></span>
+                    <p class="eq">L = </p> <span id="result_23_3" class="task7 eq"></span>
                 </div>
                 <img src="pictures/radius-of-the-circumference-of-triangle.png"
                     alt="radius-of-the-circumference-of-triangle">
                 <div class="flex">
-                    <p class="eq">R = </p> <span class="task7 eq"></span>
+                    <p class="eq">R = </p> <span id="result_23_4" class="task7 eq"></span>
                 </div>
                 <img src="pictures/radius-of-the-inscribed-circle-of-the-triangle.png"
                     alt="radius-of-the-inscribed-circle-of-the-triangle">
                 <div class="flex">
-                    <p class="eq">r = </p> <span class="task7 eq"></span>
+                    <p class="eq">r = </p> <span id="result_23_5" class="task7 eq"></span>
                 </div>
 
-                <input class="input positive-with-digit" type="text" maxlength="10" placeholder="a">
-                <input class="positive-with-digit" type="text" maxlength="10" placeholder="b">
-                <input class="positive-with-digit" type="text" maxlength="10" placeholder="c">
-                <input type="button" value="Submit" onclick="triangleCalculations()">
+                <input id="input_23_1" class="input positive-with-digit" type="text" maxlength="10" placeholder="a">
+                <input id="input_23_2" class="positive-with-digit" type="text" maxlength="10" placeholder="b">
+                <input id="input_23_3" class="positive-with-digit" type="text" maxlength="10" placeholder="c">
+                <input type="button" value="Submit"
+                    onclick="objectName.twentyThirdTaskSubmitClick(document.querySelector('#input_23_1').value, document.querySelector('#input_23_2').value, document.querySelector('#input_23_3').value,document.querySelector('#input_23_1'),document.querySelector('#input_23_2'),document.querySelector('#input_23_3'), document.querySelector('#result_23_1'),document.querySelector('#result_23_2'),document.querySelector('#result_23_3'), document.querySelector('#result_23_4'), document.querySelector('#result_23_5'))">
 
             </article>
         </div>
@@ -181,18 +190,19 @@
             <article>
                 <img src="pictures/distance-between-two-points.png" alt="distance-between-two-points">
                 <div class="flex">
-                    <p class="eq">d = </p> <span class="task8 eq"></span>
+                    <p class="eq">d = </p> <span id="result_24_1" class="task8 eq"></span>
                 </div>
                 <div class="input-section input">
                     <div class="coordinate-inputs">
-                        <input class="any-number" type="text" maxlength="10" placeholder="x1">
-                        <input class="any-number" type="text" maxlength="10" placeholder="y1">
+                        <input id="input_24_1" class="any-number" type="text" maxlength="10" placeholder="x1">
+                        <input id="input_24_2" class="any-number" type="text" maxlength="10" placeholder="y1">
                     </div>
                     <div class="coordinate-inputs">
-                        <input class="any-number" type="text" maxlength="10" placeholder="x2">
-                        <input class="any-number" type="text" maxlength="10" placeholder="y2">
+                        <input id="input_24_3" class="any-number" type="text" maxlength="10" placeholder="x2">
+                        <input id="input_24_4" class="any-number" type="text" maxlength="10" placeholder="y2">
                     </div>
-                    <input type="button" value="Submit" onclick="distanceCalculations()">
+                    <input type="button" value="Submit"
+                        onclick="objectName.twentyFourthTaskSubmitClick(document.querySelector('#input_24_1').value, document.querySelector('#input_24_2').value, document.querySelector('#input_24_3').value, document.querySelector('#input_24_4').value, document.querySelector('#input_24_1'), document.querySelector('#input_24_2'), document.querySelector('#input_24_3'), document.querySelector('#input_24_4'), document.querySelector('#result_24_1'))">
                 </div>
             </article>
         </div>
@@ -202,11 +212,12 @@
             <label for="ac-9">33. Даны действительные числа x, y. Получить max(x,y), min(x,y)</label>
             <article>
                 <div class="flex">
-                    <span class="task9 margin eq"></span>
+                    <span id="result_33_1" class="task9 margin eq"></span>
                 </div>
-                <input class="input any-number" type="text" maxlength="10" placeholder="x">
-                <input class="any-number" type="text" maxlength="10" placeholder="y">
-                <input type="button" value="Submit" onclick="maxMinCalculation()">
+                <input id="input_33_1" class="input any-number" type="text" maxlength="10" placeholder="x">
+                <input id="input_33_2" class="any-number" type="text" maxlength="10" placeholder="y">
+                <input type="button" value="Submit"
+                    onclick="objectName.thirtyThirdTaskSubmitClick(document.querySelector('#input_33_1').value,document.querySelector('#input_33_2').value,undefined, document.querySelector('#input_33_1'), document.querySelector('#input_33_2'),undefined, document.querySelector('#result_33_1'))">
             </article>
         </div>
 
@@ -216,12 +227,13 @@
             <label for="ac-10">34. Даны действительные числа x, y, z. Получить max(x,y,z), min(x,y,z)</label>
             <article>
                 <div class="flex">
-                    <span class="task10 margin eq"></span>
+                    <span id="result_34_1" class="task10 margin eq"></span>
                 </div>
-                <input class="array input any-number" type="text" maxlength="10" placeholder="x">
-                <input class="array any-number" type="text" maxlength="10" placeholder="y">
-                <input class="array any-number" type="text" maxlength="10" placeholder="z">
-                <input type="button" value="Submit" onclick="maxMinCalc()">
+                <input id="input_34_1" class="array input any-number" type="text" maxlength="10" placeholder="x">
+                <input id="input_34_2" class="array any-number" type="text" maxlength="10" placeholder="y">
+                <input id="input_34_3" class="array any-number" type="text" maxlength="10" placeholder="z">
+                <input id="input_34_4" type="button" value="Submit"
+                    onclick="objectName.thirtyThirdTaskSubmitClick(document.querySelector('#input_34_1').value, document.querySelector('#input_34_2').value, document.querySelector('#input_34_3').value, document.querySelector('#input_34_1'), document.querySelector('#input_34_2'), document.querySelector('#input_34_3'), document.querySelector('#result_34_1'))">
             </article>
         </div>
         <hr>
@@ -230,17 +242,18 @@
             <label for="ac-11">35. Даны действительные числа x, y, z. Вычислить:</label>
             <article>
                 <div class="flex">
-                    <p class="eq">а) max (x + y + z, x • y • z)</p><span class="task11 eq"></span>
+                    <p class="eq">а) max (x + y + z, x • y • z)</p><span id="result_35_1" class="task11 eq"></span>
                 </div>
                 <div class="flex">
                     <p class="eq">б) min<sup>2</sup>(x + y +
-                        z/2, x • y • z) + 1</p><span class="task11 eq"></span>
+                        z/2, x • y • z) + 1</p><span id="result_35_2" class="task11 eq"></span>
                 </div>
 
-                <input class="input any-number" type="text" maxlength="10" placeholder="x">
-                <input class="any-number" type="text" maxlength="10" placeholder="y">
-                <input class="any-number" type="text" maxlength="10" placeholder="z">
-                <input type="button" value="Submit" onclick="maxMin()">
+                <input id="input_35_1" class="input any-number" type="text" maxlength="10" placeholder="x">
+                <input id="input_35_2" class="any-number" type="text" maxlength="10" placeholder="y">
+                <input id="input_35_3" class="any-number" type="text" maxlength="10" placeholder="z">
+                <input type="button" value="Submit"
+                    onclick="objectName.thirtyFiveTaskSubmitClick(document.querySelector('#input_35_1').value, document.querySelector('#input_35_2').value, document.querySelector('#input_35_3').value, document.querySelector('#input_35_1'), document.querySelector('#input_35_2'), document.querySelector('#input_35_3'), document.querySelector('#result_35_1'), document.querySelector('#result_35_2'))">
             </article>
         </div>
         <hr>
@@ -250,12 +263,13 @@
                 c. </label>
             <article>
                 <div class="flex">
-                    <p class="eq">Result: </p><span class="task12 eq"></span>
+                    <p class="eq">Result: </p><span id="result_36_1" class="task12 eq"></span>
                 </div>
-                <input class="input any-number" type="text" maxlength="10" placeholder="a">
-                <input class="any-number" type="text" maxlength="10" placeholder="b">
-                <input class="any-number" type="text" maxlength="10" placeholder="c">
-                <input type="button" value="Submit" onclick="inequalityCheck()">
+                <input id="input_36_1" class="input any-number" type="text" maxlength="10" placeholder="a">
+                <input id="input_36_2" class="any-number" type="text" maxlength="10" placeholder="b">
+                <input id="input_36_3" class="any-number" type="text" maxlength="10" placeholder="c">
+                <input type="button" value="Submit"
+                    onclick="objectName.thirtySixthTaskSubmitClick(document.querySelector('#input_36_1').value, document.querySelector('#input_36_2').value, document.querySelector('#input_36_3').value, document.querySelector('#input_36_1'), document.querySelector('#input_36_2'),  document.querySelector('#input_36_3'), document.querySelector('#result_36_1'))">
             </article>
         </div>
         <hr>
@@ -268,12 +282,13 @@
                 это не так.</label>
             <article>
                 <div class="flex">
-                    <p class="eq">Result: </p><span class="task13 eq"></span>
+                    <p class="eq">Result: </p><span id="result_37_1" class="task13 eq"></span>
                 </div>
-                <input class="input any-number" type="text" maxlength="10" placeholder="a">
-                <input class="any-number" type="text" maxlength="10" placeholder="b">
-                <input class="any-number" type="text" maxlength="10" placeholder="c">
-                <input type="button" value="Submit" onclick="inequalityCheck2()">
+                <input id="input_37_1" class="input any-number" type="text" maxlength="10" placeholder="a">
+                <input id="input_37_2" class="any-number" type="text" maxlength="10" placeholder="b">
+                <input id="input_37_3" class="any-number" type="text" maxlength="10" placeholder="c">
+                <input type="button" value="Submit"
+                    onclick="objectName.thirtyseventhTaskSubmitClick(document.querySelector('#input_37_1').value, document.querySelector('#input_37_2').value, document.querySelector('#input_37_3').value, document.querySelector('#input_37_1'), document.querySelector('#input_37_2'), document.querySelector('#input_37_3'), document.querySelector('#result_37_1'))">
             </article>
         </div>
         <hr>
@@ -282,33 +297,35 @@
             <label for="ac-13">77. Дано натуральное число n. Вычислить:</label>
             <article class="mediumArticle">
                 <div class="flex">
-                    <p class="eq">a) 2<sup>n</sup> </p><span class="task14 eq"></span>
+                    <p class="eq">a) 2<sup>n</sup> </p><span id="result_77_1" class="task14 eq"></span>
                 </div>
                 <div class="flex">
-                    <p class="eq">б) n! </p><span class="task14 eq"></span>
+                    <p class="eq">б) n! </p><span id="result_77_2" class="task14 eq"></span>
                 </div>
                 <div class="flex">
                     <p class="eq">в)</p><img class="formula-img" src="pictures/formula-3.png" alt="formula-3"><span
-                        class="task14 eq"></span>
+                        id="result_77_3" class="task14 eq"></span>
                 </div>
                 <div class="flex">
                     <p class="eq">г)</p><img class="formula-img" src="pictures/formula-4.png" alt="formula-4"><span
-                        class="task14 eq"></span>
+                        id="result_77_4" class="task14 eq"></span>
                 </div>
                 <div class="flex">
                     <p class="eq">д)</p><img class="formula-image" src="pictures/formula-5.png" alt="formula-5"><span
-                        class="task14 eq"></span>
+                        id="result_77_5" class="task14 eq"></span>
                 </div>
                 <div class="flex">
                     <p class="eq">е)</p><img class="formula-img" src="pictures/formula-6.png" alt="formula-6"><span
-                        class="task14 eq"></span>
+                        id="result_77_6" class="task14 eq"></span>
                 </div>
                 <div class="flex">
                     <p class="eq">ж)</p><img class="formula-img" src="pictures/formula-7.png" alt="formula-7"><span
-                        class="task14 eq"></span>
+                        id="result_77_7" class="task14 eq"></span>
                 </div>
-                <input class="input-task77 input real-positive-number" type="text" maxlength="10" placeholder="n">
-                <input type="button" value="Submit" onclick="task77()">
+                <input id="input_77_1" class="input-task77 input real-positive-number" type="text" maxlength="10"
+                    placeholder="n">
+                <input type="button" value="Submit"
+                    onclick="objectName.seventySeventhTaskSubmitClick(document.querySelector('#input_77_1').value, document.querySelector('#input_77_1'), document.querySelector('#result_77_1'), document.querySelector('#result_77_2'), document.querySelector('#result_77_3'), document.querySelector('#result_77_4'), document.querySelector('#result_77_5'), document.querySelector('#result_77_6'), document.querySelector('#result_77_7'))">
             </article>
         </div>
         <hr>
@@ -317,25 +334,27 @@
             <label for="ac-14">78. Даны действительное число a и натуральное число n. Вычислить:</label>
             <article class="medium-article">
                 <div class="flex">
-                    <p class="eq">а) a<sup>n</sup> </p><span class="task15 eq"></span>
+                    <p class="eq">а) a<sup>n</sup> </p><span id="result_78_1" class="task15 eq"></span>
                 </div>
                 <div class="flex">
-                    <p class="eq">б) a(a + 1)...(a + n - 1) </p><span class="task15 eq"></span>
+                    <p class="eq">б) a(a + 1)...(a + n - 1) </p><span id="result_78_2" class="task15 eq"></span>
                 </div>
                 <div class="flex">
-                    <p class="eq">в)</p><img src="pictures/formula-78-3.png" alt="formula-3"><span
+                    <p class="eq">в)</p><img src="pictures/formula-78-3.png" alt="formula-3"><span id="result_78_3"
                         class="task15 eq"></span>
                 </div>
                 <div class="flex">
-                    <p class="eq">г)</p><img src="pictures/formula-78-4.png" alt="formula-3"><span
+                    <p class="eq">г)</p><img src="pictures/formula-78-4.png" alt="formula-3"><span id="result_78_4"
                         class="task15 eq"></span>
                 </div>
                 <div class="flex">
-                    <p class="eq">д) a(a - n)(a - 2n)...(a - n<sup>2</sup>)</p><span class="task15 eq"></span>
+                    <p class="eq">д) a(a - n)(a - 2n)...(a - n<sup>2</sup>)</p><span id="result_78_5"
+                        class="task15 eq"></span>
                 </div>
-                <input class="input any-number" type="text" maxlength="10" placeholder="a">
-                <input class="real-positive-number" type="text" maxlength="10" placeholder="n">
-                <input type="button" value="Submit" onclick="task78()">
+                <input id="input_78_1" class="input any-number" type="text" maxlength="10" placeholder="a">
+                <input id="input_78_2" class="real-positive-number" type="text" maxlength="10" placeholder="n">
+                <input type="button" value="Submit"
+                    onclick="objectName.seventyEighthTaskSubmitClick(document.querySelector('#input_78_1').value, document.querySelector('#input_78_2').value, document.querySelector('#input_78_1'), document.querySelector('#input_78_2'), document.querySelector('#result_78_1'), document.querySelector('#result_78_2'), document.querySelector('#result_78_3'), document.querySelector('#result_78_4'), document.querySelector('#result_78_5'))">
             </article>
         </div>
         <hr>
